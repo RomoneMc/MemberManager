@@ -1,0 +1,7 @@
+c:\users\romone\documents\visual studio 2013\Projects\MemberManager\OpenDoorLibrary\bin\Debug\OpenDoorLibrary.dll
+c:\users\romone\documents\visual studio 2013\Projects\MemberManager\OpenDoorLibrary\bin\Debug\OpenDoorLibrary.pdb
+c:\users\romone\documents\visual studio 2013\Projects\MemberManager\OpenDoorLibrary\obj\Debug\OpenDoorLibrary.csprojResolveAssemblyReference.cache
+c:\users\romone\documents\visual studio 2013\Projects\MemberManager\OpenDoorLibrary\obj\Debug\OpenDoorLibrary.dll
+c:\users\romone\documents\visual studio 2013\Projects\MemberManager\OpenDoorLibrary\obj\Debug\OpenDoorLibrary.pdb
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\OpenDoorLibrary\obj\Debug\OpenDoorLibrary.Properties.Resources.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\OpenDoorLibrary\obj\Debug\OpenDoorLibrary.csproj.GenerateResource.Cache
