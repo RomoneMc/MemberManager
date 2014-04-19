@@ -196,6 +196,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MemberManager Icon.ico" />
+    <None Include="Resources\appbar.church.png" />
+    <None Include="Resources\appbar.door.leave.png" />
+    <None Include="Resources\appbar.settings.png" />
+    <None Include="Resources\appbar.people.multiple.png" />
     <None Include="Resources\diagonal-noise.png" />
     <None Include="Resources\linedpaper.png" />
     <None Include="Resources\food.png" />

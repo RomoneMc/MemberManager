@@ -24,7 +24,11 @@ namespace MemberManager.Member
         private void btnAddMember_Click(object sender, EventArgs e)
         {
             Form addMember = new AddMember();
-            addMember.ShowDialog();
+            if (addMember.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.personTableAdapter.Fill(this.contactDataSet.Person);
+            }
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

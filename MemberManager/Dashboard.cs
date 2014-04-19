@@ -17,9 +17,11 @@ namespace MemberManager
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //this.personTableAdapter.Fill(this.contactDataSet.Person);
+            this.personTableAdapter.Fill(this.contactDataSet.Person);
             lblUsername.Text = OpenDoorLibrary.User.username;
             Time.Start();
+
+            personBindingSource1.Filter = "DOB >= #" + DateTime.Today + "# AND DOB <= #" + DateTime.Today.AddDays(7) + "#";
 
             // Retrieve verse of the day if internet is available
             if (MyComputer.Network.IsAvailable)

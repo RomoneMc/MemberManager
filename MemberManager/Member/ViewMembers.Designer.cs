@@ -35,7 +35,6 @@
             this.personID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,12 +42,12 @@
             this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anniversaryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.childrenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nationalityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.occupationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberSinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.waterBaptismDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Church = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherMinistryDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.previousRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -83,7 +82,6 @@
             this.personID,
             this.nameDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
             this.dOBDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
             this.telephoneDataGridViewTextBoxColumn,
@@ -91,12 +89,12 @@
             this.maritalStatusDataGridViewTextBoxColumn,
             this.anniversaryDateDataGridViewTextBoxColumn,
             this.childrenDataGridViewTextBoxColumn,
-            this.nationalityDataGridViewTextBoxColumn,
             this.occupationDataGridViewTextBoxColumn,
             this.memberRoleDataGridViewTextBoxColumn,
             this.visitsDataGridViewTextBoxColumn,
             this.memberSinceDataGridViewTextBoxColumn,
             this.waterBaptismDateDataGridViewTextBoxColumn,
+            this.Church,
             this.otherMinistryDataGridViewCheckBoxColumn,
             this.previousRoleDataGridViewTextBoxColumn});
             this.dgvMemberGrid.DataSource = this.personBindingSource;
@@ -136,13 +134,6 @@
             this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
             this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
             this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 50;
             // 
             // dOBDataGridViewTextBoxColumn
             // 
@@ -186,12 +177,6 @@
             this.childrenDataGridViewTextBoxColumn.HeaderText = "Children";
             this.childrenDataGridViewTextBoxColumn.Name = "childrenDataGridViewTextBoxColumn";
             // 
-            // nationalityDataGridViewTextBoxColumn
-            // 
-            this.nationalityDataGridViewTextBoxColumn.DataPropertyName = "Nationality";
-            this.nationalityDataGridViewTextBoxColumn.HeaderText = "Nationality";
-            this.nationalityDataGridViewTextBoxColumn.Name = "nationalityDataGridViewTextBoxColumn";
-            // 
             // occupationDataGridViewTextBoxColumn
             // 
             this.occupationDataGridViewTextBoxColumn.DataPropertyName = "Occupation";
@@ -221,6 +206,12 @@
             this.waterBaptismDateDataGridViewTextBoxColumn.DataPropertyName = "Water Baptism Date";
             this.waterBaptismDateDataGridViewTextBoxColumn.HeaderText = "Water Baptism Date";
             this.waterBaptismDateDataGridViewTextBoxColumn.Name = "waterBaptismDateDataGridViewTextBoxColumn";
+            // 
+            // Church
+            // 
+            this.Church.DataPropertyName = "Church";
+            this.Church.HeaderText = "Church";
+            this.Church.Name = "Church";
             // 
             // otherMinistryDataGridViewCheckBoxColumn
             // 
@@ -288,8 +279,8 @@
             // 
             this.btnRemoveMember.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveMember.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRemoveMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnRemoveMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite;
+            this.btnRemoveMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnRemoveMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnRemoveMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveMember.Image = global::MemberManager.Properties.Resources.remove_user_32;
             this.btnRemoveMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,8 +297,8 @@
             // 
             this.btnEditMember.BackColor = System.Drawing.Color.Transparent;
             this.btnEditMember.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEditMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite;
+            this.btnEditMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnEditMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnEditMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditMember.Image = global::MemberManager.Properties.Resources.edit_user_32;
             this.btnEditMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,8 +315,8 @@
             // 
             this.btnAddMember.BackColor = System.Drawing.Color.Transparent;
             this.btnAddMember.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite;
+            this.btnAddMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnAddMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMember.Image = global::MemberManager.Properties.Resources.add_user_32;
             this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,10 +360,11 @@
         private ContactDataSet contactDataSet;
         private System.Windows.Forms.BindingSource personBindingSource;
         private ContactDataSetTableAdapters.PersonTableAdapter personTableAdapter;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn personID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
@@ -380,15 +372,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maritalStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anniversaryDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn childrenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nationalityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn occupationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn memberRoleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn visitsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn memberSinceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn waterBaptismDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Church;
         private System.Windows.Forms.DataGridViewCheckBoxColumn otherMinistryDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn previousRoleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label1;
     }
 }

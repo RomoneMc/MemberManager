@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MemberManager.Member
@@ -12,6 +8,7 @@ namespace MemberManager.Member
     public partial class AddMember : Form
     {
         Random rnd = new Random();
+        int addedcount = 0;
 
         public AddMember()
         {
@@ -40,6 +37,9 @@ namespace MemberManager.Member
                 rolesTableAdapter.Update(contactDataSet.Roles);
 
                 contactDataSet.AcceptChanges();
+
+                addedcount += 1;
+                lblAddedCount.Text = addedcount.ToString();
             }
             catch (Exception)
             {
@@ -48,11 +48,22 @@ namespace MemberManager.Member
 
             personBindingSource.AddNew();
             rolesBindingSource.AddNew();
+
+            List<CheckBox> chbox = tbpInformation.Controls.OfType<CheckBox>().ToList<CheckBox>();
+
+            foreach (var box in chbox)
+            {
+                box.Checked = false;
+            }
+
             txtPersonID.Text = GenerateRandomPersonId();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
+            if (addedcount > 0)
+                DialogResult = System.Windows.Forms.DialogResult.OK;
+
             this.Close();
         }
 

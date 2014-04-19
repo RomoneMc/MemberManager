@@ -764,8 +764,6 @@ namespace MemberManager {
             
             private global::System.Data.DataColumn columnGender;
             
-            private global::System.Data.DataColumn columnAge;
-            
             private global::System.Data.DataColumn columnAddress;
             
             private global::System.Data.DataColumn columnTelephone;
@@ -777,8 +775,6 @@ namespace MemberManager {
             private global::System.Data.DataColumn columnAnniversary_Date;
             
             private global::System.Data.DataColumn columnChildren;
-            
-            private global::System.Data.DataColumn columnNationality;
             
             private global::System.Data.DataColumn columnOccupation;
             
@@ -793,6 +789,8 @@ namespace MemberManager {
             private global::System.Data.DataColumn columnOther_Ministry;
             
             private global::System.Data.DataColumn columnPrevious_Role;
+            
+            private global::System.Data.DataColumn columnChurch;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -861,14 +859,6 @@ namespace MemberManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AgeColumn {
-                get {
-                    return this.columnAge;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn AddressColumn {
                 get {
                     return this.columnAddress;
@@ -912,14 +902,6 @@ namespace MemberManager {
             public global::System.Data.DataColumn ChildrenColumn {
                 get {
                     return this.columnChildren;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NationalityColumn {
-                get {
-                    return this.columnNationality;
                 }
             }
             
@@ -981,6 +963,14 @@ namespace MemberManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ChurchColumn {
+                get {
+                    return this.columnChurch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1021,42 +1011,40 @@ namespace MemberManager {
                         string Name, 
                         System.DateTime DOB, 
                         string Gender, 
-                        short Age, 
                         string Address, 
                         string Telephone, 
                         string Email, 
                         string Marital_Status, 
                         System.DateTime Anniversary_Date, 
                         short Children, 
-                        string Nationality, 
                         string Occupation, 
                         string Member_Role, 
                         short Visits, 
                         System.DateTime Member_Since, 
                         System.DateTime Water_Baptism_Date, 
                         bool Other_Ministry, 
-                        string Previous_Role) {
+                        string Previous_Role, 
+                        string Church) {
                 PersonRow rowPersonRow = ((PersonRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PersonID,
                         Name,
                         DOB,
                         Gender,
-                        Age,
                         Address,
                         Telephone,
                         Email,
                         Marital_Status,
                         Anniversary_Date,
                         Children,
-                        Nationality,
                         Occupation,
                         Member_Role,
                         Visits,
                         Member_Since,
                         Water_Baptism_Date,
                         Other_Ministry,
-                        Previous_Role};
+                        Previous_Role,
+                        Church};
                 rowPersonRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPersonRow);
                 return rowPersonRow;
@@ -1090,14 +1078,12 @@ namespace MemberManager {
                 this.columnName = base.Columns["Name"];
                 this.columnDOB = base.Columns["DOB"];
                 this.columnGender = base.Columns["Gender"];
-                this.columnAge = base.Columns["Age"];
                 this.columnAddress = base.Columns["Address"];
                 this.columnTelephone = base.Columns["Telephone"];
                 this.columnEmail = base.Columns["Email"];
                 this.columnMarital_Status = base.Columns["Marital Status"];
                 this.columnAnniversary_Date = base.Columns["Anniversary Date"];
                 this.columnChildren = base.Columns["Children"];
-                this.columnNationality = base.Columns["Nationality"];
                 this.columnOccupation = base.Columns["Occupation"];
                 this.columnMember_Role = base.Columns["Member Role"];
                 this.columnVisits = base.Columns["Visits"];
@@ -1105,6 +1091,7 @@ namespace MemberManager {
                 this.columnWater_Baptism_Date = base.Columns["Water Baptism Date"];
                 this.columnOther_Ministry = base.Columns["Other Ministry"];
                 this.columnPrevious_Role = base.Columns["Previous Role"];
+                this.columnChurch = base.Columns["Church"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1118,8 +1105,6 @@ namespace MemberManager {
                 base.Columns.Add(this.columnDOB);
                 this.columnGender = new global::System.Data.DataColumn("Gender", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGender);
-                this.columnAge = new global::System.Data.DataColumn("Age", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAge);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
                 this.columnTelephone = new global::System.Data.DataColumn("Telephone", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1132,8 +1117,6 @@ namespace MemberManager {
                 base.Columns.Add(this.columnAnniversary_Date);
                 this.columnChildren = new global::System.Data.DataColumn("Children", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnChildren);
-                this.columnNationality = new global::System.Data.DataColumn("Nationality", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNationality);
                 this.columnOccupation = new global::System.Data.DataColumn("Occupation", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOccupation);
                 this.columnMember_Role = new global::System.Data.DataColumn("Member Role", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1148,6 +1131,8 @@ namespace MemberManager {
                 base.Columns.Add(this.columnOther_Ministry);
                 this.columnPrevious_Role = new global::System.Data.DataColumn("Previous Role", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrevious_Role);
+                this.columnChurch = new global::System.Data.DataColumn("Church", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChurch);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPersonID}, true));
                 this.columnPersonID.AllowDBNull = false;
@@ -1158,10 +1143,10 @@ namespace MemberManager {
                 this.columnTelephone.MaxLength = 30;
                 this.columnEmail.MaxLength = 100;
                 this.columnMarital_Status.MaxLength = 100;
-                this.columnNationality.MaxLength = 150;
                 this.columnOccupation.MaxLength = 255;
                 this.columnMember_Role.MaxLength = 100;
                 this.columnPrevious_Role.MaxLength = 255;
+                this.columnChurch.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2714,22 +2699,6 @@ namespace MemberManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Age {
-                get {
-                    try {
-                        return ((short)(this[this.tablePerson.AgeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Age\' in table \'Person\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePerson.AgeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Address {
                 get {
                     try {
@@ -2821,22 +2790,6 @@ namespace MemberManager {
                 }
                 set {
                     this[this.tablePerson.ChildrenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Nationality {
-                get {
-                    try {
-                        return ((string)(this[this.tablePerson.NationalityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nationality\' in table \'Person\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePerson.NationalityColumn] = value;
                 }
             }
             
@@ -2954,6 +2907,22 @@ namespace MemberManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Church {
+                get {
+                    try {
+                        return ((string)(this[this.tablePerson.ChurchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Church\' in table \'Person\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePerson.ChurchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNameNull() {
                 return this.IsNull(this.tablePerson.NameColumn);
             }
@@ -2986,18 +2955,6 @@ namespace MemberManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGenderNull() {
                 this[this.tablePerson.GenderColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAgeNull() {
-                return this.IsNull(this.tablePerson.AgeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAgeNull() {
-                this[this.tablePerson.AgeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3070,18 +3027,6 @@ namespace MemberManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetChildrenNull() {
                 this[this.tablePerson.ChildrenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNationalityNull() {
-                return this.IsNull(this.tablePerson.NationalityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNationalityNull() {
-                this[this.tablePerson.NationalityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3166,6 +3111,18 @@ namespace MemberManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPrevious_RoleNull() {
                 this[this.tablePerson.Previous_RoleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsChurchNull() {
+                return this.IsNull(this.tablePerson.ChurchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetChurchNull() {
+                this[this.tablePerson.ChurchColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4412,14 +4369,12 @@ namespace MemberManager.ContactDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("DOB", "DOB");
             tableMapping.ColumnMappings.Add("Gender", "Gender");
-            tableMapping.ColumnMappings.Add("Age", "Age");
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Telephone", "Telephone");
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Marital Status", "Marital Status");
             tableMapping.ColumnMappings.Add("Anniversary Date", "Anniversary Date");
             tableMapping.ColumnMappings.Add("Children", "Children");
-            tableMapping.ColumnMappings.Add("Nationality", "Nationality");
             tableMapping.ColumnMappings.Add("Occupation", "Occupation");
             tableMapping.ColumnMappings.Add("Member Role", "Member Role");
             tableMapping.ColumnMappings.Add("Visits", "Visits");
@@ -4427,6 +4382,7 @@ namespace MemberManager.ContactDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Water Baptism Date", "Water Baptism Date");
             tableMapping.ColumnMappings.Add("Other Ministry", "Other Ministry");
             tableMapping.ColumnMappings.Add("Previous Role", "Previous Role");
+            tableMapping.ColumnMappings.Add("Church", "Church");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -4436,22 +4392,20 @@ namespace MemberManager.ContactDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO Person
-                         (PersonID, Name, DOB, Gender, Age, Address, Telephone, Email, [Marital Status], [Anniversary Date], Children, Nationality, Occupation, [Member Role], Visits, [Member Since], [Water Baptism Date], 
-                         [Other Ministry], [Previous Role])
-VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                         (PersonID, Name, DOB, Gender, Address, Telephone, Email, [Marital Status], [Anniversary Date], Children, Occupation, [Member Role], Visits, [Member Since], [Water Baptism Date], [Other Ministry], 
+                         [Previous Role], Church)
+VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Name", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DOB", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.WChar, 8, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Age", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Age", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Telephone", global::System.Data.OleDb.OleDbType.WChar, 30, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Marital_Status", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marital Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Anniversary_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Anniversary Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Children", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nationality", global::System.Data.OleDb.OleDbType.WChar, 150, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nationality", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Occupation", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Occupation", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Member_Role", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Member Role", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visits", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visits", global::System.Data.DataRowVersion.Current, false, null));
@@ -4459,24 +4413,24 @@ VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Water_Baptism_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Water Baptism Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Other_Ministry", global::System.Data.OleDb.OleDbType.Boolean, 2, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Other Ministry", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Previous_Role", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Previous Role", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Church", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Church", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE       Person
-SET                Name = ?, DOB = ?, Gender = ?, Age = ?, Address = ?, Telephone = ?, Email = ?, [Marital Status] = ?, [Anniversary Date] = ?, Children = ?, Nationality = ?, Occupation = ?, [Member Role] = ?, Visits = ?, 
-                         [Member Since] = ?, [Water Baptism Date] = ?, [Other Ministry] = ?, [Previous Role] = ?
+SET                PersonID = ?, Name = ?, DOB = ?, Gender = ?, Address = ?, Telephone = ?, Email = ?, [Marital Status] = ?, [Anniversary Date] = ?, Children = ?, Occupation = ?, [Member Role] = ?, Visits = ?, [Member Since] = ?, 
+                         [Water Baptism Date] = ?, [Other Ministry] = ?, [Previous Role] = ?, Church = ?
 WHERE        (PersonID = ?)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Name", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DOB", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DOB", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Gender", global::System.Data.OleDb.OleDbType.WChar, 8, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Gender", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Age", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Age", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Telephone", global::System.Data.OleDb.OleDbType.WChar, 30, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telephone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Marital_Status", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Marital Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Anniversary_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Anniversary Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Children", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Children", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nationality", global::System.Data.OleDb.OleDbType.WChar, 150, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nationality", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Occupation", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Occupation", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Member_Role", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Member Role", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visits", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visits", global::System.Data.DataRowVersion.Current, false, null));
@@ -4484,6 +4438,7 @@ WHERE        (PersonID = ?)";
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Water_Baptism_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Water Baptism Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Other_Ministry", global::System.Data.OleDb.OleDbType.Boolean, 2, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Other Ministry", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Previous_Role", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Previous Role", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Church", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Church", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Original, false, null));
         }
         
@@ -4500,10 +4455,9 @@ WHERE        (PersonID = ?)";
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PersonID, Name, DOB, Gender, Age, Address, Telephone, Email, [Marital Stat" +
-                "us], [Anniversary Date], Children, Nationality, Occupation, [Member Role], Visit" +
-                "s, [Member Since], [Water Baptism Date], [Other Ministry], [Previous Role] FROM " +
-                "Person";
+            this._commandCollection[0].CommandText = "SELECT PersonID, Name, DOB, Gender, Address, Telephone, Email, [Marital Status], " +
+                "[Anniversary Date], Children, Occupation, [Member Role], Visits, [Member Since]," +
+                " [Water Baptism Date], [Other Ministry], [Previous Role], Church FROM Person";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -4596,21 +4550,20 @@ WHERE        (PersonID = ?)";
                     string Name, 
                     global::System.Nullable<global::System.DateTime> DOB, 
                     string Gender, 
-                    global::System.Nullable<short> Age, 
                     string Address, 
                     string Telephone, 
                     string Email, 
                     string Marital_Status, 
                     global::System.Nullable<global::System.DateTime> Anniversary_Date, 
                     global::System.Nullable<short> Children, 
-                    string Nationality, 
                     string Occupation, 
                     string Member_Role, 
                     global::System.Nullable<short> Visits, 
                     global::System.Nullable<global::System.DateTime> Member_Since, 
                     global::System.Nullable<global::System.DateTime> Water_Baptism_Date, 
                     bool Other_Ministry, 
-                    string Previous_Role) {
+                    string Previous_Role, 
+                    string Church) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PersonID));
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
@@ -4630,90 +4583,84 @@ WHERE        (PersonID = ?)";
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Gender));
             }
-            if ((Age.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Age.Value));
-            }
-            else {
+            if ((Address == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Address == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Address));
+            }
+            if ((Telephone == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Address));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Telephone));
             }
-            if ((Telephone == null)) {
+            if ((Email == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Telephone));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Email));
             }
-            if ((Email == null)) {
+            if ((Marital_Status == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Email));
-            }
-            if ((Marital_Status == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Marital_Status));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Marital_Status));
             }
             if ((Anniversary_Date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(Anniversary_Date.Value));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(Anniversary_Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Children.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((short)(Children.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Children.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((short)(Children.Value));
-            }
-            else {
+            if ((Occupation == null)) {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Nationality == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Occupation));
+            }
+            if ((Member_Role == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Nationality));
-            }
-            if ((Occupation == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Occupation));
-            }
-            if ((Member_Role == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Member_Role));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Member_Role));
             }
             if ((Visits.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((short)(Visits.Value));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((short)(Visits.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Member_Since.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(Member_Since.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Water_Baptism_Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(Water_Baptism_Date.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Member_Since.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((System.DateTime)(Member_Since.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Water_Baptism_Date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(Water_Baptism_Date.Value));
-            }
-            else {
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(Other_Ministry));
+            if ((Previous_Role == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(Other_Ministry));
-            if ((Previous_Role == null)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Previous_Role));
+            }
+            if ((Church == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Previous_Role));
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Church));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4736,17 +4683,16 @@ WHERE        (PersonID = ?)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
+                    int PersonID, 
                     string Name, 
                     global::System.Nullable<global::System.DateTime> DOB, 
                     string Gender, 
-                    global::System.Nullable<short> Age, 
                     string Address, 
                     string Telephone, 
                     string Email, 
                     string Marital_Status, 
                     global::System.Nullable<global::System.DateTime> Anniversary_Date, 
                     global::System.Nullable<short> Children, 
-                    string Nationality, 
                     string Occupation, 
                     string Member_Role, 
                     global::System.Nullable<short> Visits, 
@@ -4754,30 +4700,26 @@ WHERE        (PersonID = ?)";
                     global::System.Nullable<global::System.DateTime> Water_Baptism_Date, 
                     bool Other_Ministry, 
                     string Previous_Role, 
+                    string Church, 
                     int Original_PersonID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(PersonID));
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
             }
             if ((DOB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(DOB.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DOB.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Gender == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Gender));
-            }
-            if ((Age.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(Age.Value));
-            }
-            else {
+            if ((Gender == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Gender));
             }
             if ((Address == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -4815,48 +4757,48 @@ WHERE        (PersonID = ?)";
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Nationality == null)) {
+            if ((Occupation == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Nationality));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Occupation));
             }
-            if ((Occupation == null)) {
+            if ((Member_Role == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Occupation));
-            }
-            if ((Member_Role == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Member_Role));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Member_Role));
             }
             if ((Visits.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((short)(Visits.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((short)(Visits.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Member_Since.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Member_Since.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Member_Since.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Member_Since.Value));
+            if ((Water_Baptism_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Water_Baptism_Date.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Water_Baptism_Date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Water_Baptism_Date.Value));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Other_Ministry));
+            if ((Previous_Role == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Previous_Role));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Other_Ministry));
-            if ((Previous_Role == null)) {
+            if ((Church == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Previous_Role));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Church));
             }
             this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_PersonID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -4873,6 +4815,32 @@ WHERE        (PersonID = ?)";
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Name, 
+                    global::System.Nullable<global::System.DateTime> DOB, 
+                    string Gender, 
+                    string Address, 
+                    string Telephone, 
+                    string Email, 
+                    string Marital_Status, 
+                    global::System.Nullable<global::System.DateTime> Anniversary_Date, 
+                    global::System.Nullable<short> Children, 
+                    string Occupation, 
+                    string Member_Role, 
+                    global::System.Nullable<short> Visits, 
+                    global::System.Nullable<global::System.DateTime> Member_Since, 
+                    global::System.Nullable<global::System.DateTime> Water_Baptism_Date, 
+                    bool Other_Ministry, 
+                    string Previous_Role, 
+                    string Church, 
+                    int Original_PersonID) {
+            return this.Update(Original_PersonID, Name, DOB, Gender, Address, Telephone, Email, Marital_Status, Anniversary_Date, Children, Occupation, Member_Role, Visits, Member_Since, Water_Baptism_Date, Other_Ministry, Previous_Role, Church, Original_PersonID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
