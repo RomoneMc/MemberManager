@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMembers));
             this.dgvMemberGrid = new System.Windows.Forms.DataGridView();
-            this.personID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +54,7 @@
             this.contactDataSet = new MemberManager.ContactDataSet();
             this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
             this.pnlManageMembers = new System.Windows.Forms.Panel();
+            this.btnViewMemberDetails = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnRemoveMember = new System.Windows.Forms.Button();
@@ -76,11 +77,12 @@
             this.dgvMemberGrid.AutoGenerateColumns = false;
             this.dgvMemberGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvMemberGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvMemberGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvMemberGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMemberGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvMemberGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMemberGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.personID,
             this.nameDataGridViewTextBoxColumn,
+            this.personID,
             this.genderDataGridViewTextBoxColumn,
             this.dOBDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
@@ -114,6 +116,15 @@
             this.dgvMemberGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMemberGrid.Size = new System.Drawing.Size(845, 423);
             this.dgvMemberGrid.TabIndex = 0;
+            this.dgvMemberGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberGrid_CellEndEdit);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.Frozen = true;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // personID
             // 
@@ -121,13 +132,6 @@
             this.personID.HeaderText = "PersonID";
             this.personID.Name = "personID";
             this.personID.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // genderDataGridViewTextBoxColumn
             // 
@@ -244,8 +248,9 @@
             this.pnlManageMembers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlManageMembers.BackColor = System.Drawing.Color.White;
-            this.pnlManageMembers.BackgroundImage = global::MemberManager.Properties.Resources.diagonal_noise;
+            this.pnlManageMembers.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
             this.pnlManageMembers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlManageMembers.Controls.Add(this.btnViewMemberDetails);
             this.pnlManageMembers.Controls.Add(this.label1);
             this.pnlManageMembers.Controls.Add(this.txtSearch);
             this.pnlManageMembers.Controls.Add(this.btnRemoveMember);
@@ -256,11 +261,27 @@
             this.pnlManageMembers.Size = new System.Drawing.Size(883, 47);
             this.pnlManageMembers.TabIndex = 1;
             // 
+            // btnViewMemberDetails
+            // 
+            this.btnViewMemberDetails.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewMemberDetails.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewMemberDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnViewMemberDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnViewMemberDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewMemberDetails.Image = global::MemberManager.Properties.Resources.appbar_magnify;
+            this.btnViewMemberDetails.Location = new System.Drawing.Point(431, 5);
+            this.btnViewMemberDetails.Name = "btnViewMemberDetails";
+            this.btnViewMemberDetails.Size = new System.Drawing.Size(46, 35);
+            this.btnViewMemberDetails.TabIndex = 3;
+            this.btnViewMemberDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnViewMemberDetails.UseVisualStyleBackColor = false;
+            this.btnViewMemberDetails.Click += new System.EventHandler(this.btnViewMemberDetails_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(511, 18);
+            this.label1.Location = new System.Drawing.Point(511, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 15);
             this.label1.TabIndex = 2;
@@ -296,6 +317,7 @@
             // btnEditMember
             // 
             this.btnEditMember.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditMember.Enabled = false;
             this.btnEditMember.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditMember.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btnEditMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
@@ -306,7 +328,7 @@
             this.btnEditMember.Name = "btnEditMember";
             this.btnEditMember.Size = new System.Drawing.Size(125, 35);
             this.btnEditMember.TabIndex = 0;
-            this.btnEditMember.Text = "Edit Member";
+            this.btnEditMember.Text = "Save Changes";
             this.btnEditMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditMember.UseVisualStyleBackColor = false;
             this.btnEditMember.Click += new System.EventHandler(this.btnEditMember_Click);
@@ -362,8 +384,9 @@
         private ContactDataSetTableAdapters.PersonTableAdapter personTableAdapter;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personID;
+        private System.Windows.Forms.Button btnViewMemberDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personID;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;

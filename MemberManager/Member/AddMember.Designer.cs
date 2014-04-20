@@ -523,7 +523,7 @@
             // tbpInformation
             // 
             this.tbpInformation.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbpInformation.BackgroundImage = global::MemberManager.Properties.Resources.linedpaper;
+            this.tbpInformation.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
             this.tbpInformation.Controls.Add(this.cxCounselling);
             this.tbpInformation.Controls.Add(this.dateTimePicker1);
             this.tbpInformation.Controls.Add(this.cxAdministration);

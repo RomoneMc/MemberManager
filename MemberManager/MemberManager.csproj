@@ -108,6 +108,12 @@
     <Compile Include="Member\AddMember.Designer.cs">
       <DependentUpon>AddMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member\ViewMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\ViewMember.Designer.cs">
+      <DependentUpon>ViewMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member\ViewMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Member\AddMember.resx">
       <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\ViewMember.resx">
+      <DependentUpon>ViewMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Member\ViewMembers.resx">
       <DependentUpon>ViewMembers.cs</DependentUpon>
@@ -196,6 +205,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MemberManager Icon.ico" />
+    <None Include="Resources\appbar.navigate.next.png" />
+    <None Include="Resources\appbar.navigate.previous.png" />
+    <None Include="Resources\appbar.people.png" />
+    <None Include="Resources\appbar.magnify.png" />
+    <None Include="Resources\appbar.people.magnify.png" />
+    <None Include="Resources\Rings-icon.png" />
+    <None Include="Resources\appbar.ring.png" />
+    <None Include="Resources\bcake.png" />
     <None Include="Resources\appbar.church.png" />
     <None Include="Resources\appbar.door.leave.png" />
     <None Include="Resources\appbar.settings.png" />

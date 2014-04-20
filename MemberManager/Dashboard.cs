@@ -21,7 +21,7 @@ namespace MemberManager
             lblUsername.Text = OpenDoorLibrary.User.username;
             Time.Start();
 
-            personBindingSource1.Filter = "DOB >= #" + DateTime.Today + "# AND DOB <= #" + DateTime.Today.AddDays(7) + "#";
+            cbxChooseDisplay.SelectedIndex = 0;
 
             // Retrieve verse of the day if internet is available
             if (MyComputer.Network.IsAvailable)
@@ -51,9 +51,57 @@ namespace MemberManager
             lblVerseoftheDay.Text = Votd;
         }
 
+        private void cbxChooseDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxChooseDisplay.SelectedIndex == 0)
+            {
+                gbUpcomingEvents.Text = "Upcoming Birthdays";
+                personBindingSource.Filter = "DOB >= #" + DateTime.Today + "# AND DOB <= #" + DateTime.Today.AddDays(7) + "#";
+                pbxDisplayImage.Image = MemberManager.Properties.Resources.bcake;
+            }
+            else
+            {
+                gbUpcomingEvents.Text = "Upcoming Anniversaries";
+                personBindingSource.Filter = "[Anniversary Date] >= #" + DateTime.Today + "# AND [Anniversary Date] <= #" + DateTime.Today.AddDays(7) + "#";
+                pbxDisplayImage.Image = MemberManager.Properties.Resources.Rings_icon;
+            }
+            
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void dgvBirthdays_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+            if (cbxChooseDisplay.SelectedIndex == 1)
+            {
+                if (dgv.Columns[e.ColumnIndex].Name == "name" && e.RowIndex >= 0 && dgv["name", e.RowIndex].Value is string)
+                {
+                    string modname;
+                    string n = e.Value.ToString();
+
+                    int spacepos = n.LastIndexOf(" ");
+                    int dashpos = n.LastIndexOf("-");
+
+                    if(dashpos > spacepos)
+                    {
+                        modname = n.Remove(0, dashpos + 1);
+                        modname = modname.Insert(0, "The ");
+                    }
+                    else
+                    {
+                        modname = n.Remove(0, spacepos);
+                        modname = modname.Insert(0, "The");
+                    }
+
+                    modname = modname.Insert(modname.Length, "'s");
+                    e.Value = modname;
+                }
+            }
         }
     }
 }

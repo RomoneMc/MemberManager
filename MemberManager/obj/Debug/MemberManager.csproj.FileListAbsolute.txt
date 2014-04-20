@@ -17,3 +17,4 @@ c:\users\romone\documents\visual studio 2013\Projects\MemberManager\MemberManage
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.LoginForm.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.ViewMembers.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.AddMember.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.ViewMember.resources

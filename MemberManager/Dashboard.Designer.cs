@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnNewService = new System.Windows.Forms.Button();
             this.btnViewMembers = new System.Windows.Forms.Button();
             this.btnNewMember = new System.Windows.Forms.Button();
             this.mcCalendar = new System.Windows.Forms.MonthCalendar();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbUpcomingEvents = new System.Windows.Forms.GroupBox();
+            this.cbxChooseDisplay = new System.Windows.Forms.ComboBox();
             this.dgvBirthdays = new System.Windows.Forms.DataGridView();
-            this.personBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contactDataSet = new MemberManager.ContactDataSet();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbxDisplayImage = new System.Windows.Forms.PictureBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblVerseoftheDay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,21 +54,13 @@
             this.Time = new System.Windows.Forms.Timer(this.components);
             this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
             this.SetVerseoftheDay = new System.ComponentModel.BackgroundWorker();
-            this.personBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvAnniversaries = new System.Windows.Forms.DataGridView();
-            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbUpcomingEvents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBirthdays)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnniversaries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisplayImage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -158,28 +152,31 @@
             this.mcCalendar.Name = "mcCalendar";
             this.mcCalendar.TabIndex = 1;
             // 
-            // groupBox2
+            // gbUpcomingEvents
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.dgvBirthdays);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(617, 18);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(283, 187);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Upcoming Birthdays";
+            this.gbUpcomingEvents.BackColor = System.Drawing.Color.Transparent;
+            this.gbUpcomingEvents.Controls.Add(this.cbxChooseDisplay);
+            this.gbUpcomingEvents.Controls.Add(this.dgvBirthdays);
+            this.gbUpcomingEvents.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUpcomingEvents.Location = new System.Drawing.Point(617, 119);
+            this.gbUpcomingEvents.Name = "gbUpcomingEvents";
+            this.gbUpcomingEvents.Size = new System.Drawing.Size(283, 304);
+            this.gbUpcomingEvents.TabIndex = 1;
+            this.gbUpcomingEvents.TabStop = false;
+            this.gbUpcomingEvents.Text = "Upcoming Birthdays";
             // 
-            // pictureBox1
+            // cbxChooseDisplay
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(233, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.cbxChooseDisplay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxChooseDisplay.FormattingEnabled = true;
+            this.cbxChooseDisplay.Items.AddRange(new object[] {
+            "Birthdays",
+            "Anniversaries"});
+            this.cbxChooseDisplay.Location = new System.Drawing.Point(19, 33);
+            this.cbxChooseDisplay.Name = "cbxChooseDisplay";
+            this.cbxChooseDisplay.Size = new System.Drawing.Size(248, 29);
+            this.cbxChooseDisplay.TabIndex = 3;
+            this.cbxChooseDisplay.SelectedIndexChanged += new System.EventHandler(this.cbxChooseDisplay_SelectedIndexChanged);
             // 
             // dgvBirthdays
             // 
@@ -188,69 +185,87 @@
             this.dgvBirthdays.AllowUserToResizeColumns = false;
             this.dgvBirthdays.AllowUserToResizeRows = false;
             this.dgvBirthdays.AutoGenerateColumns = false;
+            this.dgvBirthdays.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBirthdays.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvBirthdays.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvBirthdays.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvBirthdays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBirthdays.ColumnHeadersVisible = false;
             this.dgvBirthdays.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.personIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.dOBDataGridViewTextBoxColumn});
-            this.dgvBirthdays.DataSource = this.personBindingSource1;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBirthdays.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvBirthdays.Location = new System.Drawing.Point(20, 28);
+            this.dOBDataGridViewTextBoxColumn,
+            this.name});
+            this.dgvBirthdays.DataSource = this.personBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBirthdays.GridColor = System.Drawing.Color.RoyalBlue;
+            this.dgvBirthdays.Location = new System.Drawing.Point(19, 68);
             this.dgvBirthdays.MultiSelect = false;
             this.dgvBirthdays.Name = "dgvBirthdays";
-            this.dgvBirthdays.ReadOnly = true;
             this.dgvBirthdays.RowHeadersVisible = false;
+            this.dgvBirthdays.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBirthdays.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvBirthdays.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBirthdays.ShowCellErrors = false;
             this.dgvBirthdays.ShowEditingIcon = false;
             this.dgvBirthdays.ShowRowErrors = false;
-            this.dgvBirthdays.Size = new System.Drawing.Size(248, 139);
+            this.dgvBirthdays.Size = new System.Drawing.Size(248, 223);
             this.dgvBirthdays.TabIndex = 2;
+            this.dgvBirthdays.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBirthdays_CellFormatting);
             // 
-            // personBindingSource1
+            // personIDDataGridViewTextBoxColumn
             // 
-            this.personBindingSource1.DataMember = "Person";
-            this.personBindingSource1.DataSource = this.contactDataSet;
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            dataGridViewCellStyle1.Format = "M";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dOBDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            this.dOBDataGridViewTextBoxColumn.Width = 5;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.name.DataPropertyName = "Name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.Width = 5;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "Person";
+            this.personBindingSource.DataSource = this.contactDataSet;
             // 
             // contactDataSet
             // 
             this.contactDataSet.DataSetName = "ContactDataSet";
             this.contactDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // groupBox3
+            // pbxDisplayImage
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.dgvAnniversaries);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(617, 211);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(283, 212);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Upcoming Anniversaries";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(233, -10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pbxDisplayImage.BackColor = System.Drawing.Color.Transparent;
+            this.pbxDisplayImage.Image = global::MemberManager.Properties.Resources.Rings_icon;
+            this.pbxDisplayImage.InitialImage = null;
+            this.pbxDisplayImage.Location = new System.Drawing.Point(850, 97);
+            this.pbxDisplayImage.Name = "pbxDisplayImage";
+            this.pbxDisplayImage.Size = new System.Drawing.Size(50, 50);
+            this.pbxDisplayImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbxDisplayImage.TabIndex = 1;
+            this.pbxDisplayImage.TabStop = false;
             // 
             // lblTime
             // 
@@ -310,95 +325,35 @@
             this.SetVerseoftheDay.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SetVerseoftheDay_DoWork);
             this.SetVerseoftheDay.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SetVerseoftheDay_RunWorkerCompleted);
             // 
-            // personBindingSource2
+            // imageList1
             // 
-            this.personBindingSource2.DataMember = "Person";
-            this.personBindingSource2.DataSource = this.contactDataSet;
-            // 
-            // dgvAnniversaries
-            // 
-            this.dgvAnniversaries.AllowUserToAddRows = false;
-            this.dgvAnniversaries.AllowUserToDeleteRows = false;
-            this.dgvAnniversaries.AllowUserToResizeColumns = false;
-            this.dgvAnniversaries.AllowUserToResizeRows = false;
-            this.dgvAnniversaries.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvAnniversaries.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvAnniversaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnniversaries.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAnniversaries.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAnniversaries.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvAnniversaries.Location = new System.Drawing.Point(20, 28);
-            this.dgvAnniversaries.MultiSelect = false;
-            this.dgvAnniversaries.Name = "dgvAnniversaries";
-            this.dgvAnniversaries.ReadOnly = true;
-            this.dgvAnniversaries.RowHeadersVisible = false;
-            this.dgvAnniversaries.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvAnniversaries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvAnniversaries.ShowCellErrors = false;
-            this.dgvAnniversaries.ShowEditingIcon = false;
-            this.dgvAnniversaries.ShowRowErrors = false;
-            this.dgvAnniversaries.Size = new System.Drawing.Size(248, 168);
-            this.dgvAnniversaries.TabIndex = 3;
-            // 
-            // personIDDataGridViewTextBoxColumn
-            // 
-            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
-            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
-            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
-            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            this.dOBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(50, 50);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(912, 435);
+            this.Controls.Add(this.pbxDisplayImage);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblVerseoftheDay);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbUpcomingEvents);
             this.Controls.Add(this.mcCalendar);
             this.Controls.Add(this.groupBox1);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbUpcomingEvents.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBirthdays)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnniversaries)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisplayImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,8 +363,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MonthCalendar mcCalendar;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbUpcomingEvents;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnNewService;
         private System.Windows.Forms.Button btnViewMembers;
@@ -417,20 +371,19 @@
         private System.Windows.Forms.Label lblVerseoftheDay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbxDisplayImage;
         private System.Windows.Forms.Timer Time;
         private System.Windows.Forms.DataGridView dgvBirthdays;
         private ContactDataSet contactDataSet;
-        private System.Windows.Forms.BindingSource personBindingSource1;
+        private System.Windows.Forms.BindingSource personBindingSource;
         private ContactDataSetTableAdapters.PersonTableAdapter personTableAdapter;
         private System.ComponentModel.BackgroundWorker SetVerseoftheDay;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.BindingSource personBindingSource2;
-        private System.Windows.Forms.DataGridView dgvAnniversaries;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ComboBox cbxChooseDisplay;
         private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }
 

@@ -57,7 +57,28 @@ namespace MemberManager.Member
 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
-            
+            if(MessageBox.Show("Are you sure you would like to save these changes?", "Save Changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+            {
+                personBindingSource.EndEdit();
+                personTableAdapter.Update(contactDataSet.Person);
+                contactDataSet.AcceptChanges();
+            }
+
+            btnEditMember.Enabled = false;
+        }
+
+        private void btnViewMemberDetails_Click(object sender, EventArgs e)
+        {
+            Form f = new ViewMember();
+            f.Show();
+        }
+
+        private void dgvMemberGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if(String.IsNullOrWhiteSpace(dgvMemberGrid[e.ColumnIndex, e.RowIndex].Value.ToString()))
+            {
+                btnEditMember.Enabled = true;
+            }
         }
     }
 }
