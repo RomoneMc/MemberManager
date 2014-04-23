@@ -73,6 +73,16 @@ namespace MemberManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_church {
             get {
                 object obj = ResourceManager.GetObject("appbar.church", resourceCulture);
@@ -93,9 +103,59 @@ namespace MemberManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_edit {
+            get {
+                object obj = ResourceManager.GetObject("appbar.edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_email_hardedge {
+            get {
+                object obj = ResourceManager.GetObject("appbar.email.hardedge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_group_add {
+            get {
+                object obj = ResourceManager.GetObject("appbar.group.add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_group_minus {
+            get {
+                object obj = ResourceManager.GetObject("appbar.group.minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appbar_magnify {
             get {
                 object obj = ResourceManager.GetObject("appbar.magnify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_minus {
+            get {
+                object obj = ResourceManager.GetObject("appbar.minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +213,9 @@ namespace MemberManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap appbar_ring {
+        internal static System.Drawing.Bitmap appbar_people1 {
             get {
-                object obj = ResourceManager.GetObject("appbar.ring", resourceCulture);
+                object obj = ResourceManager.GetObject("appbar.people1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,29 +263,9 @@ namespace MemberManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap food {
-            get {
-                object obj = ResourceManager.GetObject("food", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap linedpaper {
             get {
                 object obj = ResourceManager.GetObject("linedpaper", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logout_26 {
-            get {
-                object obj = ResourceManager.GetObject("logout-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,16 +296,6 @@ namespace MemberManager.Properties {
         internal static System.Drawing.Bitmap tiny_grid {
             get {
                 object obj = ResourceManager.GetObject("tiny_grid", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap View_Details_32 {
-            get {
-                object obj = ResourceManager.GetObject("View_Details-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

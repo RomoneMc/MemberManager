@@ -566,7 +566,7 @@
             // lblPersonID
             // 
             this.lblPersonID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "PersonID", true));
-            this.lblPersonID.Location = new System.Drawing.Point(498, 61);
+            this.lblPersonID.Location = new System.Drawing.Point(353, 96);
             this.lblPersonID.Name = "lblPersonID";
             this.lblPersonID.Size = new System.Drawing.Size(100, 29);
             this.lblPersonID.TabIndex = 20;
@@ -577,7 +577,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
             this.ClientSize = new System.Drawing.Size(659, 505);
-            this.Controls.Add(this.lblPersonID);
             this.Controls.Add(this.gpbEmpoweredAreas);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnNextMember);
@@ -609,6 +608,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblPersonID);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

@@ -36,6 +36,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.usersTableAdapter = new MemberManager.ContactDataSetTableAdapters.UsersTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.txtPassword.Size = new System.Drawing.Size(224, 29);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label2
             // 
@@ -103,6 +105,22 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Image = global::MemberManager.Properties.Resources.appbar_settings;
+            this.btnSettings.Location = new System.Drawing.Point(236, 101);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(57, 50);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Visible = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
@@ -110,6 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
             this.ClientSize = new System.Drawing.Size(305, 390);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -137,5 +156,6 @@
         private System.Windows.Forms.Button btnLogin;
         private ContactDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

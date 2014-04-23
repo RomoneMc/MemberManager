@@ -268,11 +268,13 @@
             this.btnViewMemberDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btnViewMemberDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnViewMemberDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMemberDetails.Image = global::MemberManager.Properties.Resources.appbar_magnify;
+            this.btnViewMemberDetails.Image = global::MemberManager.Properties.Resources.appbar_people1;
+            this.btnViewMemberDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewMemberDetails.Location = new System.Drawing.Point(431, 5);
             this.btnViewMemberDetails.Name = "btnViewMemberDetails";
-            this.btnViewMemberDetails.Size = new System.Drawing.Size(46, 35);
+            this.btnViewMemberDetails.Size = new System.Drawing.Size(136, 35);
             this.btnViewMemberDetails.TabIndex = 3;
+            this.btnViewMemberDetails.Text = "Detailed View";
             this.btnViewMemberDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnViewMemberDetails.UseVisualStyleBackColor = false;
             this.btnViewMemberDetails.Click += new System.EventHandler(this.btnViewMemberDetails_Click);
@@ -281,7 +283,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(511, 17);
+            this.label1.Location = new System.Drawing.Point(587, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 15);
             this.label1.TabIndex = 2;
@@ -290,9 +292,9 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(562, 7);
+            this.txtSearch.Location = new System.Drawing.Point(638, 7);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(302, 32);
+            this.txtSearch.Size = new System.Drawing.Size(226, 32);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 

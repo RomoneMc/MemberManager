@@ -18,3 +18,8 @@ C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManage
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.ViewMembers.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.AddMember.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Member.ViewMember.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.Service.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.ManageAttendants.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.NewService.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Settings.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.EditService.resources

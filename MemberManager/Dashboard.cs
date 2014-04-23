@@ -103,5 +103,11 @@ namespace MemberManager
                 }
             }
         }
+
+        private void btnNewService_Click(object sender, EventArgs e)
+        {
+            Form service = new Service.Service();
+            service.Show();
+        }
     }
 }

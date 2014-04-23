@@ -4132,9 +4132,16 @@ namespace MemberManager.ContactDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Service Number", "Service Number");
             tableMapping.ColumnMappings.Add("PersonID", "PersonID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Attendants\r\nWHERE        (PersonID = ?) AND ([Service Number] = ?)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Attendants` (`Service Number`, `PersonID`) VALUES (?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO Attendants\r\n                         ([Service Number], PersonID)\r\nVA" +
+                "LUES        (?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Current, false, null));
@@ -4150,11 +4157,18 @@ namespace MemberManager.ContactDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT [Service Number], PersonID FROM Attendants";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        Person.PersonID, Person.Name\r\nFROM            (Attendants INNER JOI" +
+                "N\r\n                         Person ON Attendants.PersonID = Person.PersonID)\r\nWH" +
+                "ERE        (Attendants.[Service Number] = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4176,6 +4190,23 @@ namespace MemberManager.ContactDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ContactDataSet.AttendantsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ContactDataSet.AttendantsDataTable dataTable = new ContactDataSet.AttendantsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ContactDataSet.AttendantsDataTable GetAttendantsByService(global::System.Nullable<int> Service_Number) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Service_Number.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Service_Number.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             ContactDataSet.AttendantsDataTable dataTable = new ContactDataSet.AttendantsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4208,6 +4239,39 @@ namespace MemberManager.ContactDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(global::System.Nullable<int> PersonID, global::System.Nullable<int> Service_Number) {
+            if ((PersonID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(PersonID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Service_Number.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Service_Number.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4452,7 +4516,7 @@ WHERE        (PersonID = ?)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PersonID, Name, DOB, Gender, Address, Telephone, Email, [Marital Status], " +
@@ -4464,6 +4528,22 @@ WHERE        (PersonID = ?)";
             this._commandCollection[1].CommandText = "DELETE FROM Person\r\nWHERE        (PersonID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PersonID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PersonID", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        PersonID, Name, Email\r\nFROM            Person\r\nWHERE        (Email " +
+                "IS NOT NULL)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT        Person.PersonID, Person.Name
+FROM            (Person LEFT OUTER JOIN
+                         Attendants ON Person.PersonID = Attendants.PersonID)
+WHERE        (Person.PersonID NOT IN
+                             (SELECT        PersonID
+                               FROM            Attendants Attendants_1
+                               WHERE        ([Service Number] = ?)))";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Param1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4485,6 +4565,34 @@ WHERE        (PersonID = ?)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ContactDataSet.PersonDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ContactDataSet.PersonDataTable dataTable = new ContactDataSet.PersonDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ContactDataSet.PersonDataTable GetEmailAddresses() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            ContactDataSet.PersonDataTable dataTable = new ContactDataSet.PersonDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ContactDataSet.PersonDataTable GetNonAttendants(global::System.Nullable<int> Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Param1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             ContactDataSet.PersonDataTable dataTable = new ContactDataSet.PersonDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5377,38 +5485,25 @@ WHERE        (PersonID = ?)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Service` WHERE ((`Service Number` = ?) AND ((? = 1 AND `Service Titl" +
-                "e` IS NULL) OR (`Service Title` = ?)) AND ((? = 1 AND `Service Date` IS NULL) OR" +
-                " (`Service Date` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM Service\r\nWHERE        ([Service Number] = ?)";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Service` (`Service Number`, `Service Title`, `Service Date`) VALUES " +
-                "(?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO Service\r\n                         ([Service Number], [Service Title]," +
+                " [Service Date])\r\nVALUES        (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Title", global::System.Data.OleDb.OleDbType.WChar, 150, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Service` SET `Service Number` = ?, `Service Title` = ?, `Service Date` = " +
-                "? WHERE ((`Service Number` = ?) AND ((? = 1 AND `Service Title` IS NULL) OR (`Se" +
-                "rvice Title` = ?)) AND ((? = 1 AND `Service Date` IS NULL) OR (`Service Date` = " +
-                "?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE       Service\r\nSET                [Service Title] = ?, [Service Date] = ?\r" +
+                "\nWHERE        ([Service Number] = ?)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Title", global::System.Data.OleDb.OleDbType.WChar, 150, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Title", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Title", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Title", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Service_Date", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Service_Date", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Service Date", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5485,23 +5580,13 @@ WHERE        (PersonID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_Service_Number, string Original_Service_Title, System.DateTime Original_Service_Date) {
-            if ((Original_Service_Number.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Service_Number.Value));
+        public virtual int Delete(global::System.Nullable<int> Service_Number) {
+            if ((Service_Number.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Service_Number.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Original_Service_Title == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Service_Title));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_Service_Date));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5556,36 +5641,20 @@ WHERE        (PersonID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Service_Number, string Service_Title, System.DateTime Service_Date, global::System.Nullable<int> Original_Service_Number, string Original_Service_Title, System.DateTime Original_Service_Date) {
-            if ((Service_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Service_Number.Value));
-            }
-            else {
+        public virtual int Update(string Service_Title, System.DateTime Service_Date, global::System.Nullable<int> Original_Service_Number) {
+            if ((Service_Title == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Service_Title == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Service_Title));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Service_Title));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Service_Date));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Service_Date));
             if ((Original_Service_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Service_Number.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Service_Number.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Service_Title == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Service_Title));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Service_Date));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5600,14 +5669,6 @@ WHERE        (PersonID = ?)";
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Service_Title, System.DateTime Service_Date, global::System.Nullable<int> Original_Service_Number, string Original_Service_Title, System.DateTime Original_Service_Date) {
-            return this.Update(Original_Service_Number, Service_Title, Service_Date, Original_Service_Number, Original_Service_Title, Original_Service_Date);
         }
     }
     

@@ -24,6 +24,8 @@ namespace MemberManager.Member
             personBindingSource.AddNew();
             rolesBindingSource.AddNew();
             txtPersonID.Text = GenerateRandomPersonId();
+
+            txtName.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

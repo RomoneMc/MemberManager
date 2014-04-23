@@ -38,5 +38,23 @@ namespace MemberManager
             txtPassword.Clear();
         }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Settings f = new Settings();
+            f.ShowDialog();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
+            {
+                btnSettings.Visible = true;
+            }
+            else
+            {
+                btnSettings.Visible = false;
+            }
+        }
+
     }
 }

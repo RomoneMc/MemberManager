@@ -118,7 +118,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(237, 27);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             // 
             // personBindingSource
             // 
@@ -137,7 +137,8 @@
             this.txtPersonID.Location = new System.Drawing.Point(233, 17);
             this.txtPersonID.Name = "txtPersonID";
             this.txtPersonID.Size = new System.Drawing.Size(92, 27);
-            this.txtPersonID.TabIndex = 2;
+            this.txtPersonID.TabIndex = 37;
+            this.txtPersonID.TabStop = false;
             this.txtPersonID.TextChanged += new System.EventHandler(this.txtPersonID_TextChanged);
             // 
             // cbxGender
@@ -150,7 +151,7 @@
             this.cbxGender.Location = new System.Drawing.Point(88, 117);
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(139, 28);
-            this.cbxGender.TabIndex = 4;
+            this.cbxGender.TabIndex = 3;
             // 
             // label5
             // 
@@ -170,7 +171,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(188, 27);
-            this.txtAddress.TabIndex = 6;
+            this.txtAddress.TabIndex = 4;
             // 
             // label6
             // 
@@ -190,7 +191,7 @@
             this.dtpDOB.Location = new System.Drawing.Point(88, 67);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(139, 27);
-            this.dtpDOB.TabIndex = 8;
+            this.dtpDOB.TabIndex = 2;
             // 
             // label7
             // 
@@ -210,7 +211,7 @@
             this.txtTelephone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Size = new System.Drawing.Size(188, 27);
-            this.txtTelephone.TabIndex = 10;
+            this.txtTelephone.TabIndex = 5;
             this.txtTelephone.Text = "(876) ";
             // 
             // label4
@@ -231,7 +232,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(188, 27);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 6;
             // 
             // label8
             // 
@@ -256,7 +257,7 @@
             this.cbxMaritalStatus.Location = new System.Drawing.Point(462, 17);
             this.cbxMaritalStatus.Name = "cbxMaritalStatus";
             this.cbxMaritalStatus.Size = new System.Drawing.Size(162, 28);
-            this.cbxMaritalStatus.TabIndex = 14;
+            this.cbxMaritalStatus.TabIndex = 9;
             // 
             // label9
             // 
@@ -275,7 +276,7 @@
             this.nudChildren.Location = new System.Drawing.Point(462, 116);
             this.nudChildren.Name = "nudChildren";
             this.nudChildren.Size = new System.Drawing.Size(79, 27);
-            this.nudChildren.TabIndex = 16;
+            this.nudChildren.TabIndex = 11;
             this.nudChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -295,7 +296,7 @@
             this.dtpAnniversary.Location = new System.Drawing.Point(462, 67);
             this.dtpAnniversary.Name = "dtpAnniversary";
             this.dtpAnniversary.Size = new System.Drawing.Size(162, 27);
-            this.dtpAnniversary.TabIndex = 18;
+            this.dtpAnniversary.TabIndex = 10;
             this.dtpAnniversary.ValueChanged += new System.EventHandler(this.dtpAnniversary_ValueChanged);
             // 
             // label11
@@ -316,7 +317,7 @@
             this.txtProfession.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProfession.Name = "txtProfession";
             this.txtProfession.Size = new System.Drawing.Size(188, 27);
-            this.txtProfession.TabIndex = 20;
+            this.txtProfession.TabIndex = 7;
             // 
             // label12
             // 
@@ -346,7 +347,7 @@
             this.dtpDateWaterBaptism.Location = new System.Drawing.Point(462, 166);
             this.dtpDateWaterBaptism.Name = "dtpDateWaterBaptism";
             this.dtpDateWaterBaptism.Size = new System.Drawing.Size(162, 27);
-            this.dtpDateWaterBaptism.TabIndex = 23;
+            this.dtpDateWaterBaptism.TabIndex = 12;
             this.dtpDateWaterBaptism.ValueChanged += new System.EventHandler(this.dtpDateWaterBaptism_ValueChanged);
             // 
             // txtChurch
@@ -360,7 +361,7 @@
             this.txtChurch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtChurch.Name = "txtChurch";
             this.txtChurch.Size = new System.Drawing.Size(204, 27);
-            this.txtChurch.TabIndex = 24;
+            this.txtChurch.TabIndex = 13;
             // 
             // cxCounselling
             // 
@@ -370,7 +371,7 @@
             this.cxCounselling.Location = new System.Drawing.Point(434, 427);
             this.cxCounselling.Name = "cxCounselling";
             this.cxCounselling.Size = new System.Drawing.Size(105, 24);
-            this.cxCounselling.TabIndex = 1;
+            this.cxCounselling.TabIndex = 19;
             this.cxCounselling.Text = "Counselling";
             this.cxCounselling.UseVisualStyleBackColor = false;
             // 
@@ -387,7 +388,7 @@
             this.cxAdministration.Location = new System.Drawing.Point(293, 457);
             this.cxAdministration.Name = "cxAdministration";
             this.cxAdministration.Size = new System.Drawing.Size(126, 24);
-            this.cxAdministration.TabIndex = 0;
+            this.cxAdministration.TabIndex = 23;
             this.cxAdministration.Text = "Administration";
             this.cxAdministration.UseVisualStyleBackColor = false;
             // 
@@ -399,7 +400,7 @@
             this.cxPrayer.Location = new System.Drawing.Point(218, 457);
             this.cxPrayer.Name = "cxPrayer";
             this.cxPrayer.Size = new System.Drawing.Size(69, 24);
-            this.cxPrayer.TabIndex = 0;
+            this.cxPrayer.TabIndex = 22;
             this.cxPrayer.Text = "Prayer";
             this.cxPrayer.UseVisualStyleBackColor = false;
             // 
@@ -411,7 +412,7 @@
             this.cxPraiseandWorship.Location = new System.Drawing.Point(48, 457);
             this.cxPraiseandWorship.Name = "cxPraiseandWorship";
             this.cxPraiseandWorship.Size = new System.Drawing.Size(155, 24);
-            this.cxPraiseandWorship.TabIndex = 0;
+            this.cxPraiseandWorship.TabIndex = 21;
             this.cxPraiseandWorship.Text = "Praise and Worship";
             this.cxPraiseandWorship.UseVisualStyleBackColor = false;
             // 
@@ -423,7 +424,7 @@
             this.cxHospitality.Location = new System.Drawing.Point(545, 427);
             this.cxHospitality.Name = "cxHospitality";
             this.cxHospitality.Size = new System.Drawing.Size(100, 24);
-            this.cxHospitality.TabIndex = 0;
+            this.cxHospitality.TabIndex = 20;
             this.cxHospitality.Text = "Hospitality";
             this.cxHospitality.UseVisualStyleBackColor = false;
             // 
@@ -435,7 +436,7 @@
             this.cxSundaySchool.Location = new System.Drawing.Point(303, 427);
             this.cxSundaySchool.Name = "cxSundaySchool";
             this.cxSundaySchool.Size = new System.Drawing.Size(125, 24);
-            this.cxSundaySchool.TabIndex = 0;
+            this.cxSundaySchool.TabIndex = 18;
             this.cxSundaySchool.Text = "Sunday School";
             this.cxSundaySchool.UseVisualStyleBackColor = false;
             // 
@@ -447,7 +448,7 @@
             this.cxYouthFellowship.Location = new System.Drawing.Point(157, 427);
             this.cxYouthFellowship.Name = "cxYouthFellowship";
             this.cxYouthFellowship.Size = new System.Drawing.Size(140, 24);
-            this.cxYouthFellowship.TabIndex = 0;
+            this.cxYouthFellowship.TabIndex = 17;
             this.cxYouthFellowship.Text = "Youth Fellowship";
             this.cxYouthFellowship.UseVisualStyleBackColor = false;
             // 
@@ -459,7 +460,7 @@
             this.cxEvangelism.Location = new System.Drawing.Point(48, 427);
             this.cxEvangelism.Name = "cxEvangelism";
             this.cxEvangelism.Size = new System.Drawing.Size(103, 24);
-            this.cxEvangelism.TabIndex = 0;
+            this.cxEvangelism.TabIndex = 16;
             this.cxEvangelism.Text = "Evangelism";
             this.cxEvangelism.UseVisualStyleBackColor = false;
             // 
@@ -482,7 +483,7 @@
             this.txtPrevRespons.Multiline = true;
             this.txtPrevRespons.Name = "txtPrevRespons";
             this.txtPrevRespons.Size = new System.Drawing.Size(204, 77);
-            this.txtPrevRespons.TabIndex = 27;
+            this.txtPrevRespons.TabIndex = 15;
             // 
             // btnSave
             // 
@@ -492,7 +493,7 @@
             this.btnSave.Location = new System.Drawing.Point(498, 557);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 33);
-            this.btnSave.TabIndex = 28;
+            this.btnSave.TabIndex = 24;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -505,7 +506,7 @@
             this.btnCancel.Location = new System.Drawing.Point(603, 557);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 33);
-            this.btnCancel.TabIndex = 28;
+            this.btnCancel.TabIndex = 25;
             this.btnCancel.Text = "Close";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnClose_Click);
@@ -518,7 +519,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(690, 539);
-            this.tabControl1.TabIndex = 29;
+            this.tabControl1.TabIndex = 1;
             // 
             // tbpInformation
             // 
@@ -578,7 +579,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(88, 365);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 27);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dateTimePicker1.TabIndex = 8;
             // 
             // label1
             // 
@@ -599,7 +600,7 @@
             this.cxOtherMinistry.Location = new System.Drawing.Point(462, 267);
             this.cxOtherMinistry.Name = "cxOtherMinistry";
             this.cxOtherMinistry.Size = new System.Drawing.Size(121, 24);
-            this.cxOtherMinistry.TabIndex = 32;
+            this.cxOtherMinistry.TabIndex = 14;
             this.cxOtherMinistry.Text = "Other Ministry";
             this.cxOtherMinistry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cxOtherMinistry.UseVisualStyleBackColor = false;
@@ -611,7 +612,8 @@
             this.txtAnniversary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAnniversary.Name = "txtAnniversary";
             this.txtAnniversary.Size = new System.Drawing.Size(129, 27);
-            this.txtAnniversary.TabIndex = 29;
+            this.txtAnniversary.TabIndex = 36;
+            this.txtAnniversary.TabStop = false;
             // 
             // txtDateWaterBaptism
             // 
@@ -620,7 +622,8 @@
             this.txtDateWaterBaptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDateWaterBaptism.Name = "txtDateWaterBaptism";
             this.txtDateWaterBaptism.Size = new System.Drawing.Size(129, 27);
-            this.txtDateWaterBaptism.TabIndex = 28;
+            this.txtDateWaterBaptism.TabIndex = 35;
+            this.txtDateWaterBaptism.TabStop = false;
             // 
             // txtRoleID
             // 
@@ -629,7 +632,7 @@
             this.txtRoleID.Location = new System.Drawing.Point(184, 365);
             this.txtRoleID.Name = "txtRoleID";
             this.txtRoleID.Size = new System.Drawing.Size(92, 27);
-            this.txtRoleID.TabIndex = 30;
+            this.txtRoleID.TabIndex = 40;
             // 
             // personTableAdapter
             // 

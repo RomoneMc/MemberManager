@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -54,7 +54,6 @@
             this.Time = new System.Windows.Forms.Timer(this.components);
             this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
             this.SetVerseoftheDay = new System.ComponentModel.BackgroundWorker();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.gbUpcomingEvents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBirthdays)).BeginInit();
@@ -112,6 +111,7 @@
             this.btnNewService.Text = "Service";
             this.btnNewService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNewService.UseVisualStyleBackColor = true;
+            this.btnNewService.Click += new System.EventHandler(this.btnNewService_Click);
             // 
             // btnViewMembers
             // 
@@ -196,14 +196,14 @@
             this.dOBDataGridViewTextBoxColumn,
             this.name});
             this.dgvBirthdays.DataSource = this.personBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBirthdays.GridColor = System.Drawing.Color.RoyalBlue;
             this.dgvBirthdays.Location = new System.Drawing.Point(19, 68);
             this.dgvBirthdays.MultiSelect = false;
@@ -230,9 +230,9 @@
             // 
             this.dOBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            dataGridViewCellStyle1.Format = "M";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dOBDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "M";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dOBDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
             this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
             this.dOBDataGridViewTextBoxColumn.Width = 5;
@@ -325,12 +325,6 @@
             this.SetVerseoftheDay.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SetVerseoftheDay_DoWork);
             this.SetVerseoftheDay.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SetVerseoftheDay_RunWorkerCompleted);
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(50, 50);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -345,6 +339,7 @@
             this.Controls.Add(this.gbUpcomingEvents);
             this.Controls.Add(this.mcCalendar);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -379,7 +374,6 @@
         private ContactDataSetTableAdapters.PersonTableAdapter personTableAdapter;
         private System.ComponentModel.BackgroundWorker SetVerseoftheDay;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ComboBox cbxChooseDisplay;
         private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;

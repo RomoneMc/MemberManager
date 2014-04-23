@@ -124,9 +124,6 @@
   <data name="diagonal-noise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diagonal-noise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appbar.settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,17 +133,23 @@
   <data name="edit_user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="View_Details-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\View_Details-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="food" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.navigate.next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.navigate.next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.navigate.previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.navigate.previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appbar.magnify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.magnify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linedpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linedpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="remove_user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,28 +160,34 @@
   <data name="Rings-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rings-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.people.multiple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.people.multiple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.people.magnify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.people.magnify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appbar.people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appbar.people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.people1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.people.magnify1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.navigate.previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.navigate.previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.group.minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.group.minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appbar.people.multiple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.people.multiple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tiny_grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tiny_grid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="appbar.people.magnify" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.people.magnify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linedpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linedpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.group.add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.group.add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="appbar.ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.ring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="appbar.navigate.next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\appbar.navigate.next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appbar.email.hardedge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appbar.email.hardedge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
