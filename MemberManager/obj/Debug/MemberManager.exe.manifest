@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MemberManager.exe" size="2915840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MemberManager.exe" size="2917888">
       <assemblyIdentity name="MemberManager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3ezqRTLhWjXtyWuOclkW/5r/kqY=</dsig:DigestValue>
+        <dsig:DigestValue>rI6N64qVSRPJzVRIW8FxU/gWWNU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6BEee5xjaa4hW6p5Z8jG2i8mdBw=</dsig:DigestValue>
+        <dsig:DigestValue>spE2d0N0j7Lht9HSeLXzBSGieFA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

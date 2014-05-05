@@ -1,0 +1,156 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MemberManagerLite
+</name>
+</assembly>
+<members>
+<member name="T:MemberManagerLite.ContactLiteDataSet.PersonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_RelationDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.RelationDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.UsersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_RelationRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.RelationRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.UsersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_RelationRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.RelationRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.UsersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.PersonTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.Person_RelationTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.RelationTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.UsersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(MemberManagerLite.ContactLiteDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(MemberManagerLite.ContactLiteDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(MemberManagerLite.ContactLiteDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateAll(MemberManagerLite.ContactLiteDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_navigate_next">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_people">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_people_multiple">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_settings">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.diagonal_noise">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.logout_26">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.pixel_weave">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.tiny_grid">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:MemberManagerLite.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

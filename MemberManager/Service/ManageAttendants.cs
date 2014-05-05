@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MemberManager.Service
@@ -29,8 +24,8 @@ namespace MemberManager.Service
         private void ManageAttendants_Load(object sender, EventArgs e)
         {
             lblServiceName.Text = lblServiceName.Text.Insert(lblServiceName.Text.Length - 1, ServiceName);
-            this.attendantsTableAdapter.Fill(this.contactDataSet.Attendants);
             this.personTableAdapter.Fill(this.contactDataSet.Person);
+            this.attendantsTableAdapter.Fill(this.contactDataSet.Attendants);
 
             try
             {

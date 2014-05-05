@@ -4535,7 +4535,7 @@ WHERE        (PersonID = ?)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT        Person.PersonID, Person.Name
+            this._commandCollection[3].CommandText = @"SELECT DISTINCT Person.PersonID, Person.Name
 FROM            (Person LEFT OUTER JOIN
                          Attendants ON Person.PersonID = Attendants.PersonID)
 WHERE        (Person.PersonID NOT IN

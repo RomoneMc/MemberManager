@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnNewService = new System.Windows.Forms.Button();
-            this.btnViewMembers = new System.Windows.Forms.Button();
             this.btnNewMember = new System.Windows.Forms.Button();
             this.mcCalendar = new System.Windows.Forms.MonthCalendar();
             this.gbUpcomingEvents = new System.Windows.Forms.GroupBox();
@@ -67,7 +66,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnLogout);
             this.groupBox1.Controls.Add(this.btnNewService);
-            this.groupBox1.Controls.Add(this.btnViewMembers);
             this.groupBox1.Controls.Add(this.btnNewMember);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(286, 119);
@@ -86,7 +84,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Image = global::MemberManager.Properties.Resources.appbar_door_leave;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogout.Location = new System.Drawing.Point(163, 141);
+            this.btnLogout.Location = new System.Drawing.Point(15, 134);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(132, 96);
             this.btnLogout.TabIndex = 7;
@@ -112,22 +110,6 @@
             this.btnNewService.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNewService.UseVisualStyleBackColor = true;
             this.btnNewService.Click += new System.EventHandler(this.btnNewService_Click);
-            // 
-            // btnViewMembers
-            // 
-            this.btnViewMembers.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnViewMembers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnViewMembers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnViewMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewMembers.Image = global::MemberManager.Properties.Resources.appbar_settings;
-            this.btnViewMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnViewMembers.Location = new System.Drawing.Point(15, 141);
-            this.btnViewMembers.Name = "btnViewMembers";
-            this.btnViewMembers.Size = new System.Drawing.Size(132, 96);
-            this.btnViewMembers.TabIndex = 1;
-            this.btnViewMembers.Text = "Settings";
-            this.btnViewMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnViewMembers.UseVisualStyleBackColor = true;
             // 
             // btnNewMember
             // 
@@ -196,14 +178,14 @@
             this.dOBDataGridViewTextBoxColumn,
             this.name});
             this.dgvBirthdays.DataSource = this.personBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBirthdays.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBirthdays.GridColor = System.Drawing.Color.RoyalBlue;
             this.dgvBirthdays.Location = new System.Drawing.Point(19, 68);
             this.dgvBirthdays.MultiSelect = false;
@@ -230,9 +212,9 @@
             // 
             this.dOBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            dataGridViewCellStyle3.Format = "M";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dOBDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "M";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dOBDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
             this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
             this.dOBDataGridViewTextBoxColumn.Width = 5;
@@ -305,7 +287,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(299, 38);
+            this.lblUsername.Location = new System.Drawing.Point(299, 40);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(146, 45);
             this.lblUsername.TabIndex = 6;
@@ -339,7 +321,9 @@
             this.Controls.Add(this.gbUpcomingEvents);
             this.Controls.Add(this.mcCalendar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -361,7 +345,6 @@
         private System.Windows.Forms.GroupBox gbUpcomingEvents;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnNewService;
-        private System.Windows.Forms.Button btnViewMembers;
         private System.Windows.Forms.Button btnNewMember;
         private System.Windows.Forms.Label lblVerseoftheDay;
         private System.Windows.Forms.Label label1;

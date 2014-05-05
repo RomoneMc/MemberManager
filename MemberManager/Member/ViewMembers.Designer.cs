@@ -291,6 +291,8 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtSearch.Location = new System.Drawing.Point(638, 7);
             this.txtSearch.Name = "txtSearch";

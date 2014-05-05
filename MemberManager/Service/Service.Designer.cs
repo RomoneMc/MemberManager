@@ -57,11 +57,13 @@
             this.btnEditService = new System.Windows.Forms.Button();
             this.ttHinter = new System.Windows.Forms.ToolTip(this.components);
             this.btnSendReminder = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendants)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantsBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvServiceList
@@ -69,8 +71,10 @@
             this.dgvServiceList.AllowUserToAddRows = false;
             this.dgvServiceList.AllowUserToOrderColumns = true;
             this.dgvServiceList.AllowUserToResizeRows = false;
-            this.dgvServiceList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvServiceList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvServiceList.AutoGenerateColumns = false;
+            this.dgvServiceList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvServiceList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvServiceList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvServiceList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -91,7 +95,7 @@
             this.dgvServiceList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvServiceList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgvServiceList.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvServiceList.Location = new System.Drawing.Point(12, 0);
+            this.dgvServiceList.Location = new System.Drawing.Point(0, 0);
             this.dgvServiceList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServiceList.MultiSelect = false;
             this.dgvServiceList.Name = "dgvServiceList";
@@ -101,7 +105,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             this.dgvServiceList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvServiceList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServiceList.Size = new System.Drawing.Size(238, 457);
+            this.dgvServiceList.Size = new System.Drawing.Size(261, 477);
             this.dgvServiceList.TabIndex = 0;
             this.dgvServiceList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiceList_CellEndEdit);
             this.dgvServiceList.SelectionChanged += new System.EventHandler(this.dgvServiceList_SelectionChanged);
@@ -148,6 +152,9 @@
             // 
             // lblServiceTitle
             // 
+            this.lblServiceTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblServiceTitle.AutoSize = true;
             this.lblServiceTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblServiceTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Service Title", true));
@@ -160,6 +167,9 @@
             // 
             // dtpServiceDate
             // 
+            this.dtpServiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpServiceDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpServiceDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.serviceBindingSource, "Service Date", true));
             this.dtpServiceDate.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -172,6 +182,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -183,6 +196,9 @@
             // 
             // lblAttendantCount
             // 
+            this.lblAttendantCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAttendantCount.AutoSize = true;
             this.lblAttendantCount.BackColor = System.Drawing.Color.Transparent;
             this.lblAttendantCount.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -199,6 +215,9 @@
             // 
             // lblServiceNumber
             // 
+            this.lblServiceNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblServiceNumber.AutoSize = true;
             this.lblServiceNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblServiceNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Service Number", true));
@@ -212,16 +231,15 @@
             // 
             this.btnNewService.BackColor = System.Drawing.Color.Transparent;
             this.btnNewService.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnNewService.FlatAppearance.BorderSize = 0;
             this.btnNewService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnNewService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnNewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewService.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNewService.Image = global::MemberManager.Properties.Resources.appbar_group_add;
-            this.btnNewService.Location = new System.Drawing.Point(686, 12);
+            this.btnNewService.Location = new System.Drawing.Point(3, 5);
             this.btnNewService.Name = "btnNewService";
-            this.btnNewService.Size = new System.Drawing.Size(62, 61);
+            this.btnNewService.Size = new System.Drawing.Size(57, 57);
             this.btnNewService.TabIndex = 1;
-            this.btnNewService.Text = "+";
             this.ttHinter.SetToolTip(this.btnNewService, "New Service");
             this.btnNewService.UseVisualStyleBackColor = false;
             this.btnNewService.Click += new System.EventHandler(this.btnNewService_Click);
@@ -230,16 +248,15 @@
             // 
             this.btnNewAttendant.BackColor = System.Drawing.Color.Transparent;
             this.btnNewAttendant.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnNewAttendant.FlatAppearance.BorderSize = 0;
             this.btnNewAttendant.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnNewAttendant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnNewAttendant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewAttendant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewAttendant.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNewAttendant.Image = global::MemberManager.Properties.Resources.appbar_people;
-            this.btnNewAttendant.Location = new System.Drawing.Point(686, 146);
+            this.btnNewAttendant.Location = new System.Drawing.Point(3, 130);
             this.btnNewAttendant.Name = "btnNewAttendant";
-            this.btnNewAttendant.Size = new System.Drawing.Size(62, 61);
+            this.btnNewAttendant.Size = new System.Drawing.Size(57, 57);
             this.btnNewAttendant.TabIndex = 1;
-            this.btnNewAttendant.Text = "+";
             this.ttHinter.SetToolTip(this.btnNewAttendant, "Add Attendants for this service.");
             this.btnNewAttendant.UseVisualStyleBackColor = false;
             this.btnNewAttendant.Click += new System.EventHandler(this.btnNewAttendant_Click);
@@ -249,8 +266,10 @@
             this.dgvAttendants.AllowUserToAddRows = false;
             this.dgvAttendants.AllowUserToOrderColumns = true;
             this.dgvAttendants.AllowUserToResizeRows = false;
-            this.dgvAttendants.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dgvAttendants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAttendants.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvAttendants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAttendants.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAttendants.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvAttendants.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvAttendants.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -266,7 +285,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAttendants.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAttendants.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvAttendants.Location = new System.Drawing.Point(375, 156);
+            this.dgvAttendants.Location = new System.Drawing.Point(317, 156);
             this.dgvAttendants.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAttendants.MultiSelect = false;
             this.dgvAttendants.Name = "dgvAttendants";
@@ -277,7 +296,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             this.dgvAttendants.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAttendants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttendants.Size = new System.Drawing.Size(281, 301);
+            this.dgvAttendants.Size = new System.Drawing.Size(339, 301);
             this.dgvAttendants.TabIndex = 9;
             this.dgvAttendants.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvAttendants_UserDeletingRow);
             // 
@@ -302,40 +321,53 @@
             // 
             this.btnEditService.BackColor = System.Drawing.Color.Transparent;
             this.btnEditService.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnEditService.FlatAppearance.BorderSize = 0;
             this.btnEditService.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnEditService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEditService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEditService.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnEditService.Image = global::MemberManager.Properties.Resources.appbar_edit;
-            this.btnEditService.Location = new System.Drawing.Point(686, 79);
+            this.btnEditService.Location = new System.Drawing.Point(3, 67);
             this.btnEditService.Name = "btnEditService";
-            this.btnEditService.Size = new System.Drawing.Size(62, 61);
+            this.btnEditService.Size = new System.Drawing.Size(57, 57);
             this.btnEditService.TabIndex = 1;
-            this.btnEditService.Text = "+";
             this.ttHinter.SetToolTip(this.btnEditService, "Edit Selected Service");
             this.btnEditService.UseVisualStyleBackColor = false;
             this.btnEditService.Click += new System.EventHandler(this.btnEditService_Click);
             // 
             // ttHinter
             // 
-            this.ttHinter.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttHinter.BackColor = System.Drawing.Color.WhiteSmoke;
             // 
             // btnSendReminder
             // 
             this.btnSendReminder.BackColor = System.Drawing.Color.Transparent;
             this.btnSendReminder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSendReminder.FlatAppearance.BorderSize = 0;
             this.btnSendReminder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnSendReminder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSendReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendReminder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSendReminder.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSendReminder.Image = global::MemberManager.Properties.Resources.appbar_email_hardedge;
-            this.btnSendReminder.Location = new System.Drawing.Point(686, 213);
+            this.btnSendReminder.Location = new System.Drawing.Point(3, 193);
             this.btnSendReminder.Name = "btnSendReminder";
-            this.btnSendReminder.Size = new System.Drawing.Size(62, 61);
+            this.btnSendReminder.Size = new System.Drawing.Size(57, 57);
             this.btnSendReminder.TabIndex = 1;
-            this.btnSendReminder.Text = "+";
+            this.ttHinter.SetToolTip(this.btnSendReminder, "Mail a reminder");
             this.btnSendReminder.UseVisualStyleBackColor = false;
             this.btnSendReminder.Click += new System.EventHandler(this.btnSendReminder_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnNewService);
+            this.panel1.Controls.Add(this.btnNewAttendant);
+            this.panel1.Controls.Add(this.btnEditService);
+            this.panel1.Controls.Add(this.btnSendReminder);
+            this.panel1.Location = new System.Drawing.Point(692, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(64, 477);
+            this.panel1.TabIndex = 10;
             // 
             // Service
             // 
@@ -343,10 +375,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
             this.ClientSize = new System.Drawing.Size(757, 476);
-            this.Controls.Add(this.btnNewService);
-            this.Controls.Add(this.btnEditService);
-            this.Controls.Add(this.btnSendReminder);
-            this.Controls.Add(this.btnNewAttendant);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblAttendantCount);
             this.Controls.Add(this.dgvAttendants);
             this.Controls.Add(this.label1);
@@ -364,6 +393,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendants)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attendantsBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +423,6 @@
         private System.Windows.Forms.Button btnEditService;
         private System.Windows.Forms.ToolTip ttHinter;
         private System.Windows.Forms.Button btnSendReminder;
+        private System.Windows.Forms.Panel panel1;
     }
 }

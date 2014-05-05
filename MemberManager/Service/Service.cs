@@ -45,7 +45,7 @@ namespace MemberManager.Service
             }
             else
             {
-                lblAttendantCount.Text = dgvAttendants.RowCount.ToString() + " Attendants";
+                lblAttendantCount.Text = dgvAttendants.RowCount.ToString() + " Attendant(s)";
             }
         }
 

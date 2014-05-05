@@ -81,6 +81,8 @@
             this.rolesTableAdapter = new MemberManager.ContactDataSetTableAdapters.RolesTableAdapter();
             this.lblAddedCount = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtMemberRole = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudChildren)).BeginInit();
@@ -239,7 +241,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(365, 22);
+            this.label8.Location = new System.Drawing.Point(365, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 17);
             this.label8.TabIndex = 13;
@@ -254,7 +256,7 @@
             "Engaged",
             "Married",
             "Widowed"});
-            this.cbxMaritalStatus.Location = new System.Drawing.Point(462, 17);
+            this.cbxMaritalStatus.Location = new System.Drawing.Point(462, 66);
             this.cbxMaritalStatus.Name = "cbxMaritalStatus";
             this.cbxMaritalStatus.Size = new System.Drawing.Size(162, 28);
             this.cbxMaritalStatus.TabIndex = 9;
@@ -264,7 +266,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(397, 120);
+            this.label9.Location = new System.Drawing.Point(397, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 17);
             this.label9.TabIndex = 15;
@@ -273,7 +275,7 @@
             // nudChildren
             // 
             this.nudChildren.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.personBindingSource, "Children", true));
-            this.nudChildren.Location = new System.Drawing.Point(462, 116);
+            this.nudChildren.Location = new System.Drawing.Point(462, 165);
             this.nudChildren.Name = "nudChildren";
             this.nudChildren.Size = new System.Drawing.Size(79, 27);
             this.nudChildren.TabIndex = 11;
@@ -284,7 +286,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(378, 73);
+            this.label10.Location = new System.Drawing.Point(378, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 17);
             this.label10.TabIndex = 17;
@@ -293,7 +295,7 @@
             // dtpAnniversary
             // 
             this.dtpAnniversary.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAnniversary.Location = new System.Drawing.Point(462, 67);
+            this.dtpAnniversary.Location = new System.Drawing.Point(462, 116);
             this.dtpAnniversary.Name = "dtpAnniversary";
             this.dtpAnniversary.Size = new System.Drawing.Size(162, 27);
             this.dtpAnniversary.TabIndex = 10;
@@ -324,7 +326,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(366, 160);
+            this.label12.Location = new System.Drawing.Point(366, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 34);
             this.label12.TabIndex = 21;
@@ -335,7 +337,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(405, 222);
+            this.label13.Location = new System.Drawing.Point(405, 269);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 17);
             this.label13.TabIndex = 22;
@@ -344,7 +346,7 @@
             // dtpDateWaterBaptism
             // 
             this.dtpDateWaterBaptism.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateWaterBaptism.Location = new System.Drawing.Point(462, 166);
+            this.dtpDateWaterBaptism.Location = new System.Drawing.Point(462, 215);
             this.dtpDateWaterBaptism.Name = "dtpDateWaterBaptism";
             this.dtpDateWaterBaptism.Size = new System.Drawing.Size(162, 27);
             this.dtpDateWaterBaptism.TabIndex = 12;
@@ -357,7 +359,7 @@
             this.txtChurch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtChurch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtChurch.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Church", true));
-            this.txtChurch.Location = new System.Drawing.Point(462, 217);
+            this.txtChurch.Location = new System.Drawing.Point(462, 264);
             this.txtChurch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtChurch.Name = "txtChurch";
             this.txtChurch.Size = new System.Drawing.Size(204, 27);
@@ -368,7 +370,7 @@
             this.cxCounselling.AutoSize = true;
             this.cxCounselling.BackColor = System.Drawing.Color.Transparent;
             this.cxCounselling.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Counselling", true));
-            this.cxCounselling.Location = new System.Drawing.Point(434, 427);
+            this.cxCounselling.Location = new System.Drawing.Point(434, 438);
             this.cxCounselling.Name = "cxCounselling";
             this.cxCounselling.Size = new System.Drawing.Size(105, 24);
             this.cxCounselling.TabIndex = 19;
@@ -385,7 +387,7 @@
             this.cxAdministration.AutoSize = true;
             this.cxAdministration.BackColor = System.Drawing.Color.Transparent;
             this.cxAdministration.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Administration", true));
-            this.cxAdministration.Location = new System.Drawing.Point(293, 457);
+            this.cxAdministration.Location = new System.Drawing.Point(293, 468);
             this.cxAdministration.Name = "cxAdministration";
             this.cxAdministration.Size = new System.Drawing.Size(126, 24);
             this.cxAdministration.TabIndex = 23;
@@ -397,7 +399,7 @@
             this.cxPrayer.AutoSize = true;
             this.cxPrayer.BackColor = System.Drawing.Color.Transparent;
             this.cxPrayer.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Prayer", true));
-            this.cxPrayer.Location = new System.Drawing.Point(218, 457);
+            this.cxPrayer.Location = new System.Drawing.Point(218, 468);
             this.cxPrayer.Name = "cxPrayer";
             this.cxPrayer.Size = new System.Drawing.Size(69, 24);
             this.cxPrayer.TabIndex = 22;
@@ -409,7 +411,7 @@
             this.cxPraiseandWorship.AutoSize = true;
             this.cxPraiseandWorship.BackColor = System.Drawing.Color.Transparent;
             this.cxPraiseandWorship.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Praise & Worship", true));
-            this.cxPraiseandWorship.Location = new System.Drawing.Point(48, 457);
+            this.cxPraiseandWorship.Location = new System.Drawing.Point(48, 468);
             this.cxPraiseandWorship.Name = "cxPraiseandWorship";
             this.cxPraiseandWorship.Size = new System.Drawing.Size(155, 24);
             this.cxPraiseandWorship.TabIndex = 21;
@@ -421,7 +423,7 @@
             this.cxHospitality.AutoSize = true;
             this.cxHospitality.BackColor = System.Drawing.Color.Transparent;
             this.cxHospitality.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Hospitality", true));
-            this.cxHospitality.Location = new System.Drawing.Point(545, 427);
+            this.cxHospitality.Location = new System.Drawing.Point(545, 438);
             this.cxHospitality.Name = "cxHospitality";
             this.cxHospitality.Size = new System.Drawing.Size(100, 24);
             this.cxHospitality.TabIndex = 20;
@@ -433,7 +435,7 @@
             this.cxSundaySchool.AutoSize = true;
             this.cxSundaySchool.BackColor = System.Drawing.Color.Transparent;
             this.cxSundaySchool.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Sunday School", true));
-            this.cxSundaySchool.Location = new System.Drawing.Point(303, 427);
+            this.cxSundaySchool.Location = new System.Drawing.Point(303, 438);
             this.cxSundaySchool.Name = "cxSundaySchool";
             this.cxSundaySchool.Size = new System.Drawing.Size(125, 24);
             this.cxSundaySchool.TabIndex = 18;
@@ -445,7 +447,7 @@
             this.cxYouthFellowship.AutoSize = true;
             this.cxYouthFellowship.BackColor = System.Drawing.Color.Transparent;
             this.cxYouthFellowship.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Youth Fellowship", true));
-            this.cxYouthFellowship.Location = new System.Drawing.Point(157, 427);
+            this.cxYouthFellowship.Location = new System.Drawing.Point(157, 438);
             this.cxYouthFellowship.Name = "cxYouthFellowship";
             this.cxYouthFellowship.Size = new System.Drawing.Size(140, 24);
             this.cxYouthFellowship.TabIndex = 17;
@@ -457,7 +459,7 @@
             this.cxEvangelism.AutoSize = true;
             this.cxEvangelism.BackColor = System.Drawing.Color.Transparent;
             this.cxEvangelism.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.rolesBindingSource, "Evangelism", true));
-            this.cxEvangelism.Location = new System.Drawing.Point(48, 427);
+            this.cxEvangelism.Location = new System.Drawing.Point(48, 438);
             this.cxEvangelism.Name = "cxEvangelism";
             this.cxEvangelism.Size = new System.Drawing.Size(103, 24);
             this.cxEvangelism.TabIndex = 16;
@@ -469,7 +471,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(355, 313);
+            this.label14.Location = new System.Drawing.Point(355, 354);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(101, 34);
             this.label14.TabIndex = 26;
@@ -478,11 +480,11 @@
             // txtPrevRespons
             // 
             this.txtPrevRespons.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Previous Role", true));
-            this.txtPrevRespons.Location = new System.Drawing.Point(462, 314);
+            this.txtPrevRespons.Location = new System.Drawing.Point(462, 355);
             this.txtPrevRespons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrevRespons.Multiline = true;
             this.txtPrevRespons.Name = "txtPrevRespons";
-            this.txtPrevRespons.Size = new System.Drawing.Size(204, 77);
+            this.txtPrevRespons.Size = new System.Drawing.Size(204, 63);
             this.txtPrevRespons.TabIndex = 15;
             // 
             // btnSave
@@ -514,7 +516,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tbpInformation);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 9);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -525,6 +527,8 @@
             // 
             this.tbpInformation.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbpInformation.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
+            this.tbpInformation.Controls.Add(this.label16);
+            this.tbpInformation.Controls.Add(this.txtMemberRole);
             this.tbpInformation.Controls.Add(this.cxCounselling);
             this.tbpInformation.Controls.Add(this.dateTimePicker1);
             this.tbpInformation.Controls.Add(this.cxAdministration);
@@ -597,7 +601,7 @@
             this.cxOtherMinistry.AutoSize = true;
             this.cxOtherMinistry.BackColor = System.Drawing.Color.Transparent;
             this.cxOtherMinistry.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.personBindingSource, "Other Ministry", true));
-            this.cxOtherMinistry.Location = new System.Drawing.Point(462, 267);
+            this.cxOtherMinistry.Location = new System.Drawing.Point(462, 316);
             this.cxOtherMinistry.Name = "cxOtherMinistry";
             this.cxOtherMinistry.Size = new System.Drawing.Size(121, 24);
             this.cxOtherMinistry.TabIndex = 14;
@@ -608,7 +612,7 @@
             // txtAnniversary
             // 
             this.txtAnniversary.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Anniversary Date", true));
-            this.txtAnniversary.Location = new System.Drawing.Point(462, 67);
+            this.txtAnniversary.Location = new System.Drawing.Point(462, 116);
             this.txtAnniversary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAnniversary.Name = "txtAnniversary";
             this.txtAnniversary.Size = new System.Drawing.Size(129, 27);
@@ -618,7 +622,7 @@
             // txtDateWaterBaptism
             // 
             this.txtDateWaterBaptism.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Water Baptism Date", true));
-            this.txtDateWaterBaptism.Location = new System.Drawing.Point(462, 166);
+            this.txtDateWaterBaptism.Location = new System.Drawing.Point(462, 215);
             this.txtDateWaterBaptism.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDateWaterBaptism.Name = "txtDateWaterBaptism";
             this.txtDateWaterBaptism.Size = new System.Drawing.Size(129, 27);
@@ -659,11 +663,31 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(446, 565);
+            this.label15.Location = new System.Drawing.Point(438, 565);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(46, 17);
             this.label15.TabIndex = 36;
             this.label15.Text = "Added.";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(365, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 17);
+            this.label16.TabIndex = 42;
+            this.label16.Text = "Member Role:";
+            // 
+            // txtMemberRole
+            // 
+            this.txtMemberRole.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Member Role", true));
+            this.txtMemberRole.Location = new System.Drawing.Point(462, 16);
+            this.txtMemberRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMemberRole.Name = "txtMemberRole";
+            this.txtMemberRole.Size = new System.Drawing.Size(204, 27);
+            this.txtMemberRole.TabIndex = 41;
             // 
             // AddMember
             // 
@@ -750,5 +774,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblAddedCount;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtMemberRole;
     }
 }
