@@ -67,10 +67,10 @@ Partial Class Relations
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.Location = New System.Drawing.Point(390, 452)
+        Me.Cancel_Button.Location = New System.Drawing.Point(455, 515)
         Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Cancel_Button.Name = "Cancel_Button"
-        Me.Cancel_Button.Size = New System.Drawing.Size(105, 38)
+        Me.Cancel_Button.Size = New System.Drawing.Size(121, 29)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Close"
         '
@@ -78,7 +78,7 @@ Partial Class Relations
         '
         Me.btnNext.Image = Global.MemberManagerLite.My.Resources.Resources.appbar_navigate_next
         Me.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnNext.Location = New System.Drawing.Point(273, 3)
+        Me.btnNext.Location = New System.Drawing.Point(488, 3)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(61, 33)
         Me.btnNext.TabIndex = 2
@@ -89,7 +89,7 @@ Partial Class Relations
         '
         Me.btnPrevious.Image = Global.MemberManagerLite.My.Resources.Resources.appbar_navigate_previous
         Me.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPrevious.Location = New System.Drawing.Point(213, 3)
+        Me.btnPrevious.Location = New System.Drawing.Point(428, 3)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(61, 33)
         Me.btnPrevious.TabIndex = 2
@@ -100,10 +100,10 @@ Partial Class Relations
         '
         Me.btnNewRelation.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnNewRelation.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnNewRelation.Location = New System.Drawing.Point(5, 3)
+        Me.btnNewRelation.Location = New System.Drawing.Point(6, 3)
         Me.btnNewRelation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnNewRelation.Name = "btnNewRelation"
-        Me.btnNewRelation.Size = New System.Drawing.Size(77, 33)
+        Me.btnNewRelation.Size = New System.Drawing.Size(127, 33)
         Me.btnNewRelation.TabIndex = 0
         Me.btnNewRelation.Text = "New"
         '
@@ -111,19 +111,20 @@ Partial Class Relations
         '
         Me.btnSaveRelation.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnSaveRelation.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSaveRelation.Location = New System.Drawing.Point(381, 3)
+        Me.btnSaveRelation.Location = New System.Drawing.Point(364, 215)
         Me.btnSaveRelation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSaveRelation.Name = "btnSaveRelation"
-        Me.btnSaveRelation.Size = New System.Drawing.Size(93, 33)
+        Me.btnSaveRelation.Size = New System.Drawing.Size(142, 33)
         Me.btnSaveRelation.TabIndex = 0
         Me.btnSaveRelation.Text = "Save"
         '
         'TextBox2
         '
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RelationBindingSource, "Relation Name", True))
-        Me.TextBox2.Location = New System.Drawing.Point(148, 79)
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(185, 113)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(272, 27)
+        Me.TextBox2.Size = New System.Drawing.Size(321, 32)
         Me.TextBox2.TabIndex = 1
         '
         'RelationBindingSource
@@ -142,18 +143,20 @@ Partial Class Relations
         Me.TextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RelationBindingSource, "Relation Type", True))
-        Me.TextBox1.Location = New System.Drawing.Point(148, 136)
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(185, 170)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(272, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(321, 32)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(39, 139)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label2.Location = New System.Drawing.Point(32, 173)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 20)
+        Me.Label2.Size = New System.Drawing.Size(130, 25)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Relation Type:"
         '
@@ -161,9 +164,10 @@ Partial Class Relations
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(31, 82)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label1.Location = New System.Drawing.Point(24, 116)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(111, 20)
+        Me.Label1.Size = New System.Drawing.Size(140, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Relation Name:"
         '
@@ -183,7 +187,7 @@ Partial Class Relations
         Me.tcRelationships.Location = New System.Drawing.Point(12, 12)
         Me.tcRelationships.Name = "tcRelationships"
         Me.tcRelationships.SelectedIndex = 0
-        Me.tcRelationships.Size = New System.Drawing.Size(487, 433)
+        Me.tcRelationships.Size = New System.Drawing.Size(564, 496)
         Me.tcRelationships.TabIndex = 3
         '
         'TabPage1
@@ -200,7 +204,7 @@ Partial Class Relations
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(479, 400)
+        Me.TabPage1.Size = New System.Drawing.Size(556, 463)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Manage Members"
         '
@@ -211,7 +215,7 @@ Partial Class Relations
         Me.lbxNonAttendants.ItemHeight = 20
         Me.lbxNonAttendants.Location = New System.Drawing.Point(13, 11)
         Me.lbxNonAttendants.Name = "lbxNonAttendants"
-        Me.lbxNonAttendants.Size = New System.Drawing.Size(201, 304)
+        Me.lbxNonAttendants.Size = New System.Drawing.Size(227, 344)
         Me.lbxNonAttendants.TabIndex = 1
         Me.lbxNonAttendants.ValueMember = "PersonID"
         '
@@ -220,9 +224,9 @@ Partial Class Relations
         Me.cbxRelations.DataSource = Me.RelationBindingSource
         Me.cbxRelations.DisplayMember = "Relation Name"
         Me.cbxRelations.FormattingEnabled = True
-        Me.cbxRelations.Location = New System.Drawing.Point(220, 11)
+        Me.cbxRelations.Location = New System.Drawing.Point(273, 11)
         Me.cbxRelations.Name = "cbxRelations"
-        Me.cbxRelations.Size = New System.Drawing.Size(248, 28)
+        Me.cbxRelations.Size = New System.Drawing.Size(267, 28)
         Me.cbxRelations.TabIndex = 4
         Me.cbxRelations.ValueMember = "RelationID"
         '
@@ -231,9 +235,9 @@ Partial Class Relations
         Me.RelationListBox.DisplayMember = "Name"
         Me.RelationListBox.FormattingEnabled = True
         Me.RelationListBox.ItemHeight = 20
-        Me.RelationListBox.Location = New System.Drawing.Point(220, 51)
+        Me.RelationListBox.Location = New System.Drawing.Point(273, 51)
         Me.RelationListBox.Name = "RelationListBox"
-        Me.RelationListBox.Size = New System.Drawing.Size(248, 264)
+        Me.RelationListBox.Size = New System.Drawing.Size(267, 364)
         Me.RelationListBox.TabIndex = 7
         Me.RelationListBox.ValueMember = "ID"
         '
@@ -242,7 +246,7 @@ Partial Class Relations
         Me.btnRemovePerson.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnRemovePerson.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnRemovePerson.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.btnRemovePerson.Location = New System.Drawing.Point(334, 322)
+        Me.btnRemovePerson.Location = New System.Drawing.Point(406, 427)
         Me.btnRemovePerson.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRemovePerson.Name = "btnRemovePerson"
         Me.btnRemovePerson.Size = New System.Drawing.Size(134, 28)
@@ -254,7 +258,7 @@ Partial Class Relations
         Me.btnSaveAssignment.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnSaveAssignment.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnSaveAssignment.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.btnSaveAssignment.Location = New System.Drawing.Point(114, 355)
+        Me.btnSaveAssignment.Location = New System.Drawing.Point(140, 426)
         Me.btnSaveAssignment.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSaveAssignment.Name = "btnSaveAssignment"
         Me.btnSaveAssignment.Size = New System.Drawing.Size(100, 30)
@@ -263,15 +267,16 @@ Partial Class Relations
         '
         'txtRelationRole
         '
-        Me.txtRelationRole.Location = New System.Drawing.Point(57, 323)
+        Me.txtRelationRole.Location = New System.Drawing.Point(57, 378)
         Me.txtRelationRole.Name = "txtRelationRole"
-        Me.txtRelationRole.Size = New System.Drawing.Size(157, 27)
+        Me.txtRelationRole.Size = New System.Drawing.Size(183, 27)
         Me.txtRelationRole.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 325)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Location = New System.Drawing.Point(9, 381)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 20)
         Me.Label4.TabIndex = 5
@@ -282,7 +287,9 @@ Partial Class Relations
         Me.TabPage2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TabPage2.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.tiny_grid
         Me.TabPage2.Controls.Add(Me.Panel1)
+        Me.TabPage2.Controls.Add(Me.btnRemoveRelation)
         Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.btnSaveRelation)
         Me.TabPage2.Controls.Add(Me.Label1)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Controls.Add(Me.TextBox2)
@@ -290,7 +297,7 @@ Partial Class Relations
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(479, 400)
+        Me.TabPage2.Size = New System.Drawing.Size(556, 463)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "New Relationship"
         '
@@ -299,32 +306,31 @@ Partial Class Relations
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnPrevious)
-        Me.Panel1.Controls.Add(Me.btnRemoveRelation)
-        Me.Panel1.Controls.Add(Me.btnNext)
         Me.Panel1.Controls.Add(Me.btnNewRelation)
-        Me.Panel1.Controls.Add(Me.btnSaveRelation)
+        Me.Panel1.Controls.Add(Me.btnNext)
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(483, 41)
+        Me.Panel1.Size = New System.Drawing.Size(557, 41)
         Me.Panel1.TabIndex = 4
         '
         'btnRemoveRelation
         '
         Me.btnRemoveRelation.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnRemoveRelation.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnRemoveRelation.Location = New System.Drawing.Point(88, 3)
+        Me.btnRemoveRelation.Location = New System.Drawing.Point(319, 368)
         Me.btnRemoveRelation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnRemoveRelation.Name = "btnRemoveRelation"
-        Me.btnRemoveRelation.Size = New System.Drawing.Size(75, 33)
+        Me.btnRemoveRelation.Size = New System.Drawing.Size(187, 73)
         Me.btnRemoveRelation.TabIndex = 0
-        Me.btnRemoveRelation.Text = "Remove"
+        Me.btnRemoveRelation.Text = "Remove Relationship"
         '
         'txtRelationID
         '
         Me.txtRelationID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RelationBindingSource, "RelationID", True))
-        Me.txtRelationID.Location = New System.Drawing.Point(148, 79)
+        Me.txtRelationID.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtRelationID.Location = New System.Drawing.Point(185, 113)
         Me.txtRelationID.Name = "txtRelationID"
-        Me.txtRelationID.Size = New System.Drawing.Size(126, 27)
+        Me.txtRelationID.Size = New System.Drawing.Size(175, 32)
         Me.txtRelationID.TabIndex = 3
         '
         'PersonRelationBindingSource
@@ -336,16 +342,13 @@ Partial Class Relations
         '
         Me.PersonTableAdapter.ClearBeforeFill = True
         '
-        'bgLoadSources
-        '
-        '
         'Relations
         '
         Me.AcceptButton = Me.btnSaveAssignment
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.pixel_weave
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(509, 503)
+        Me.ClientSize = New System.Drawing.Size(588, 557)
         Me.Controls.Add(Me.Cancel_Button)
         Me.Controls.Add(Me.tcRelationships)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

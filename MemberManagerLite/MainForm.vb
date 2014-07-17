@@ -2,13 +2,16 @@
     Property PID As Integer
     Dim filter As String
     Dim viewimage As Form = Nothing
+    Dim dt As ContactLiteDataSet.PersonDataTable = New ContactLiteDataSet.PersonDataTable
+    Dim names As New List(Of String)
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.PersonTableAdapter.Fill(Me.ContactLiteDataSet.Person)
         dgvMembers.Focus()
         lblMemberCount.Text = (dgvMembers.RowCount - 1).ToString() + " Member(s)"
 
-        BirthdaySource.Filter = "DOB >= #" + DateTime.Today + "# AND DOB <= #" + DateTime.Today.AddDays(7) + "#"
+        LoadRelationships.RunWorkerAsync()
+        'BirthdaySource.Filter = "DOB >= #" + New Date( + "# AND DOB <= #" + DateTime.Today.AddDays(7) + "#"
     End Sub
 
     Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
@@ -20,8 +23,7 @@
     Private Sub dgvMembers_SelectionChanged(sender As Object, e As EventArgs) Handles dgvMembers.SelectionChanged
         Try
             PID = Integer.Parse(dgvMembers.Item("PersonalID", dgvMembers.CurrentRow.Index).Value)
-            'LoadRelations()
-            'LoadContactNumbers()
+            tbMemberInformation.SelectTab(0)
         Catch ex As Exception
 
         End Try
@@ -85,7 +87,7 @@
         Try
             Dim dt As ContactLiteDataSet.Person_RelationDataTable = Person_RelationTableAdapter.GetRelations(PID)
 
-            For index = 0 To Person_RelationTableAdapter.GetRelations(PID).Count - 1
+            For index = 0 To dt.Count - 1
                 lbxRelations.Items.Add(dt(index).Item("Relation Name"))
             Next
         Catch ex As Exception
@@ -93,7 +95,7 @@
         End Try
     End Sub
 
-    Private Sub btnNewRelation_Click(sender As Object, e As EventArgs)
+    Private Sub btnNewRelation_Click(sender As Object, e As EventArgs) Handles btnNewRelation.Click
         Dim f As Relations = New Relations(PID)
         f.ShowDialog()
     End Sub
@@ -110,7 +112,7 @@
         lblMemberCount.Text = (dgvMembers.RowCount - 1).ToString() + " Member(s)"
     End Sub
 
-    Private Sub btnNewNumber_Click(sender As Object, e As EventArgs)
+    Private Sub btnNewNumber_Click(sender As Object, e As EventArgs) Handles btnNewNumber.Click
         NewNumber.ShowDialog()
     End Sub
 
@@ -122,10 +124,6 @@
         lblMemberCount.Text = (dgvMembers.RowCount - 1).ToString() + " Member(s)"
     End Sub
 
-    Private Sub LoadRelationships_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles LoadRelationships.DoWork
-
-    End Sub
-
     Private Sub pbxMemberPicture_Click(sender As Object, e As EventArgs) Handles pbxMemberPicture.Click
         If IsNothing(viewimage) Then
             viewimage = New MemberManagerLite.ViewImage(pbxMemberPicture.ImageLocation)
@@ -135,5 +133,33 @@
             viewimage = New MemberManagerLite.ViewImage(pbxMemberPicture.ImageLocation)
             viewimage.Show()
         End If
+    End Sub
+
+    Private Sub tbMemberInformation_Selected(sender As Object, e As EventArgs) Handles tbMemberInformation.Selected
+        If tbMemberInformation.SelectedIndex = 1 Then
+            If ContactLiteDataSet.Person_Transfer.Count = 0 Then
+                Me.Person_TransferTableAdapter.Fill(Me.ContactLiteDataSet.Person_Transfer)
+
+                PersonTransferBindingSource.Position = PersonTransferBindingSource.Find("PersonID", PID)
+                LoadContactNumbers()
+                LoadRelations()
+            End If
+        End If
+    End Sub
+
+    Private Sub LoadRelationships_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles LoadRelationships.DoWork
+        PersonTableAdapter.FillWithDOB(dt)
+
+        For Each r As ContactLiteDataSet.PersonRow In dt.Rows
+            If r.DOB.Month = Today.Month AndAlso r.DOB.Day > Today.Day Then
+                names.Add(r.DOB & " - " & r.First_Name & " " & r.Last_Name)
+            Else
+                Continue For
+            End If
+        Next
+    End Sub
+
+    Private Sub LoadRelationships_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles LoadRelationships.RunWorkerCompleted
+        dgvBirthdays.DataSource = names
     End Sub
 End Class

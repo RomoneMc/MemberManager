@@ -26,6 +26,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TransferDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -46,6 +50,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TransferRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRowChangeEvent">
 	<summary>
 Row event argument class
@@ -63,6 +71,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TelephoneRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TransferRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -87,6 +99,10 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.Person_TelephoneTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.Person_TransferTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
