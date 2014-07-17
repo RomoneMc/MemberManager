@@ -95,7 +95,7 @@
             this.dgvServiceList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvServiceList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgvServiceList.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvServiceList.Location = new System.Drawing.Point(0, 0);
+            this.dgvServiceList.Location = new System.Drawing.Point(2, 9);
             this.dgvServiceList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServiceList.MultiSelect = false;
             this.dgvServiceList.Name = "dgvServiceList";
@@ -105,7 +105,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             this.dgvServiceList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvServiceList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServiceList.Size = new System.Drawing.Size(261, 477);
+            this.dgvServiceList.Size = new System.Drawing.Size(279, 397);
             this.dgvServiceList.TabIndex = 0;
             this.dgvServiceList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiceList_CellEndEdit);
             this.dgvServiceList.SelectionChanged += new System.EventHandler(this.dgvServiceList_SelectionChanged);
@@ -123,10 +123,10 @@
             // 
             this.serviceTitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.serviceTitleDataGridViewTextBoxColumn.DataPropertyName = "Service Title";
-            this.serviceTitleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.serviceTitleDataGridViewTextBoxColumn.HeaderText = "Event";
             this.serviceTitleDataGridViewTextBoxColumn.Name = "serviceTitleDataGridViewTextBoxColumn";
             this.serviceTitleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.serviceTitleDataGridViewTextBoxColumn.Width = 57;
+            this.serviceTitleDataGridViewTextBoxColumn.Width = 64;
             // 
             // serviceDateDataGridViewTextBoxColumn
             // 
@@ -159,7 +159,7 @@
             this.lblServiceTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblServiceTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Service Title", true));
             this.lblServiceTitle.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceTitle.Location = new System.Drawing.Point(267, 19);
+            this.lblServiceTitle.Location = new System.Drawing.Point(298, 9);
             this.lblServiceTitle.Name = "lblServiceTitle";
             this.lblServiceTitle.Size = new System.Drawing.Size(268, 65);
             this.lblServiceTitle.TabIndex = 2;
@@ -167,13 +167,12 @@
             // 
             // dtpServiceDate
             // 
-            this.dtpServiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpServiceDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpServiceDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpServiceDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.serviceBindingSource, "Service Date", true));
             this.dtpServiceDate.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.dtpServiceDate.Location = new System.Drawing.Point(317, 103);
+            this.dtpServiceDate.Location = new System.Drawing.Point(348, 93);
             this.dtpServiceDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpServiceDate.Name = "dtpServiceDate";
             this.dtpServiceDate.Size = new System.Drawing.Size(339, 29);
@@ -188,7 +187,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label1.Location = new System.Drawing.Point(280, 106);
+            this.label1.Location = new System.Drawing.Point(311, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 25);
             this.label1.TabIndex = 4;
@@ -202,7 +201,7 @@
             this.lblAttendantCount.AutoSize = true;
             this.lblAttendantCount.BackColor = System.Drawing.Color.Transparent;
             this.lblAttendantCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblAttendantCount.Location = new System.Drawing.Point(571, 137);
+            this.lblAttendantCount.Location = new System.Drawing.Point(602, 127);
             this.lblAttendantCount.Name = "lblAttendantCount";
             this.lblAttendantCount.Size = new System.Drawing.Size(73, 15);
             this.lblAttendantCount.TabIndex = 6;
@@ -221,7 +220,7 @@
             this.lblServiceNumber.AutoSize = true;
             this.lblServiceNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblServiceNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceBindingSource, "Service Number", true));
-            this.lblServiceNumber.Location = new System.Drawing.Point(568, 106);
+            this.lblServiceNumber.Location = new System.Drawing.Point(620, 106);
             this.lblServiceNumber.Name = "lblServiceNumber";
             this.lblServiceNumber.Size = new System.Drawing.Size(43, 17);
             this.lblServiceNumber.TabIndex = 7;
@@ -236,7 +235,7 @@
             this.btnNewService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewService.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNewService.Image = global::MemberManager.Properties.Resources.appbar_group_add;
-            this.btnNewService.Location = new System.Drawing.Point(3, 5);
+            this.btnNewService.Location = new System.Drawing.Point(14, 3);
             this.btnNewService.Name = "btnNewService";
             this.btnNewService.Size = new System.Drawing.Size(57, 57);
             this.btnNewService.TabIndex = 1;
@@ -253,7 +252,7 @@
             this.btnNewAttendant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnNewAttendant.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNewAttendant.Image = global::MemberManager.Properties.Resources.appbar_people;
-            this.btnNewAttendant.Location = new System.Drawing.Point(3, 130);
+            this.btnNewAttendant.Location = new System.Drawing.Point(140, 3);
             this.btnNewAttendant.Name = "btnNewAttendant";
             this.btnNewAttendant.Size = new System.Drawing.Size(57, 57);
             this.btnNewAttendant.TabIndex = 1;
@@ -285,7 +284,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAttendants.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAttendants.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvAttendants.Location = new System.Drawing.Point(317, 156);
+            this.dgvAttendants.Location = new System.Drawing.Point(309, 146);
             this.dgvAttendants.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAttendants.MultiSelect = false;
             this.dgvAttendants.Name = "dgvAttendants";
@@ -296,7 +295,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue;
             this.dgvAttendants.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAttendants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttendants.Size = new System.Drawing.Size(339, 301);
+            this.dgvAttendants.Size = new System.Drawing.Size(378, 317);
             this.dgvAttendants.TabIndex = 9;
             this.dgvAttendants.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvAttendants_UserDeletingRow);
             // 
@@ -326,7 +325,7 @@
             this.btnEditService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEditService.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnEditService.Image = global::MemberManager.Properties.Resources.appbar_edit;
-            this.btnEditService.Location = new System.Drawing.Point(3, 67);
+            this.btnEditService.Location = new System.Drawing.Point(77, 3);
             this.btnEditService.Name = "btnEditService";
             this.btnEditService.Size = new System.Drawing.Size(57, 57);
             this.btnEditService.TabIndex = 1;
@@ -347,7 +346,7 @@
             this.btnSendReminder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnSendReminder.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSendReminder.Image = global::MemberManager.Properties.Resources.appbar_email_hardedge;
-            this.btnSendReminder.Location = new System.Drawing.Point(3, 193);
+            this.btnSendReminder.Location = new System.Drawing.Point(203, 3);
             this.btnSendReminder.Name = "btnSendReminder";
             this.btnSendReminder.Size = new System.Drawing.Size(57, 57);
             this.btnSendReminder.TabIndex = 1;
@@ -357,16 +356,16 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnNewService);
             this.panel1.Controls.Add(this.btnNewAttendant);
             this.panel1.Controls.Add(this.btnEditService);
             this.panel1.Controls.Add(this.btnSendReminder);
-            this.panel1.Location = new System.Drawing.Point(692, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 405);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(64, 477);
+            this.panel1.Size = new System.Drawing.Size(279, 65);
             this.panel1.TabIndex = 10;
             // 
             // Service
@@ -374,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MemberManager.Properties.Resources.tiny_grid;
-            this.ClientSize = new System.Drawing.Size(757, 476);
+            this.ClientSize = new System.Drawing.Size(712, 476);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblAttendantCount);
             this.Controls.Add(this.dgvAttendants);
@@ -417,12 +416,12 @@
         private System.Windows.Forms.Button btnNewAttendant;
         private System.Windows.Forms.DataGridView dgvAttendants;
         private System.Windows.Forms.Button btnNewService;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serviceNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serviceTitleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serviceDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnEditService;
         private System.Windows.Forms.ToolTip ttHinter;
         private System.Windows.Forms.Button btnSendReminder;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceDateDataGridViewTextBoxColumn;
     }
 }

@@ -32,12 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMembers));
             this.dgvMemberGrid = new System.Windows.Forms.DataGridView();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contactDataSet = new MemberManager.ContactDataSet();
+            this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
+            this.pnlManageMembers = new System.Windows.Forms.Panel();
+            this.btnViewMemberDetails = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnRemoveMember = new System.Windows.Forms.Button();
+            this.btnEditMember = new System.Windows.Forms.Button();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.House = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maritalStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anniversaryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,16 +61,6 @@
             this.Church = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherMinistryDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.previousRoleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contactDataSet = new MemberManager.ContactDataSet();
-            this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
-            this.pnlManageMembers = new System.Windows.Forms.Panel();
-            this.btnViewMemberDetails = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnRemoveMember = new System.Windows.Forms.Button();
-            this.btnEditMember = new System.Windows.Forms.Button();
-            this.btnAddMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).BeginInit();
@@ -83,10 +84,11 @@
             this.dgvMemberGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.personID,
-            this.genderDataGridViewTextBoxColumn,
+            this.gender,
             this.dOBDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
             this.telephoneDataGridViewTextBoxColumn,
+            this.House,
             this.emailDataGridViewTextBoxColumn,
             this.maritalStatusDataGridViewTextBoxColumn,
             this.anniversaryDateDataGridViewTextBoxColumn,
@@ -113,121 +115,10 @@
             this.dgvMemberGrid.MultiSelect = false;
             this.dgvMemberGrid.Name = "dgvMemberGrid";
             this.dgvMemberGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvMemberGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMemberGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvMemberGrid.Size = new System.Drawing.Size(845, 423);
             this.dgvMemberGrid.TabIndex = 0;
             this.dgvMemberGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberGrid_CellEndEdit);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.Frozen = true;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // personID
-            // 
-            this.personID.DataPropertyName = "PersonID";
-            this.personID.HeaderText = "PersonID";
-            this.personID.Name = "personID";
-            this.personID.Visible = false;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // maritalStatusDataGridViewTextBoxColumn
-            // 
-            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
-            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
-            // 
-            // anniversaryDateDataGridViewTextBoxColumn
-            // 
-            this.anniversaryDateDataGridViewTextBoxColumn.DataPropertyName = "Anniversary Date";
-            this.anniversaryDateDataGridViewTextBoxColumn.HeaderText = "Anniversary Date";
-            this.anniversaryDateDataGridViewTextBoxColumn.Name = "anniversaryDateDataGridViewTextBoxColumn";
-            // 
-            // childrenDataGridViewTextBoxColumn
-            // 
-            this.childrenDataGridViewTextBoxColumn.DataPropertyName = "Children";
-            this.childrenDataGridViewTextBoxColumn.HeaderText = "Children";
-            this.childrenDataGridViewTextBoxColumn.Name = "childrenDataGridViewTextBoxColumn";
-            // 
-            // occupationDataGridViewTextBoxColumn
-            // 
-            this.occupationDataGridViewTextBoxColumn.DataPropertyName = "Occupation";
-            this.occupationDataGridViewTextBoxColumn.HeaderText = "Occupation";
-            this.occupationDataGridViewTextBoxColumn.Name = "occupationDataGridViewTextBoxColumn";
-            // 
-            // memberRoleDataGridViewTextBoxColumn
-            // 
-            this.memberRoleDataGridViewTextBoxColumn.DataPropertyName = "Member Role";
-            this.memberRoleDataGridViewTextBoxColumn.HeaderText = "Member Role";
-            this.memberRoleDataGridViewTextBoxColumn.Name = "memberRoleDataGridViewTextBoxColumn";
-            // 
-            // visitsDataGridViewTextBoxColumn
-            // 
-            this.visitsDataGridViewTextBoxColumn.DataPropertyName = "Visits";
-            this.visitsDataGridViewTextBoxColumn.HeaderText = "Visits";
-            this.visitsDataGridViewTextBoxColumn.Name = "visitsDataGridViewTextBoxColumn";
-            // 
-            // memberSinceDataGridViewTextBoxColumn
-            // 
-            this.memberSinceDataGridViewTextBoxColumn.DataPropertyName = "Member Since";
-            this.memberSinceDataGridViewTextBoxColumn.HeaderText = "Member Since";
-            this.memberSinceDataGridViewTextBoxColumn.Name = "memberSinceDataGridViewTextBoxColumn";
-            // 
-            // waterBaptismDateDataGridViewTextBoxColumn
-            // 
-            this.waterBaptismDateDataGridViewTextBoxColumn.DataPropertyName = "Water Baptism Date";
-            this.waterBaptismDateDataGridViewTextBoxColumn.HeaderText = "Water Baptism Date";
-            this.waterBaptismDateDataGridViewTextBoxColumn.Name = "waterBaptismDateDataGridViewTextBoxColumn";
-            // 
-            // Church
-            // 
-            this.Church.DataPropertyName = "Church";
-            this.Church.HeaderText = "Church";
-            this.Church.Name = "Church";
-            // 
-            // otherMinistryDataGridViewCheckBoxColumn
-            // 
-            this.otherMinistryDataGridViewCheckBoxColumn.DataPropertyName = "Other Ministry";
-            this.otherMinistryDataGridViewCheckBoxColumn.HeaderText = "Other Ministry";
-            this.otherMinistryDataGridViewCheckBoxColumn.Name = "otherMinistryDataGridViewCheckBoxColumn";
-            // 
-            // previousRoleDataGridViewTextBoxColumn
-            // 
-            this.previousRoleDataGridViewTextBoxColumn.DataPropertyName = "Previous Role";
-            this.previousRoleDataGridViewTextBoxColumn.HeaderText = "Previous Role";
-            this.previousRoleDataGridViewTextBoxColumn.Name = "previousRoleDataGridViewTextBoxColumn";
             // 
             // personBindingSource
             // 
@@ -291,6 +182,8 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -355,6 +248,134 @@
             this.btnAddMember.UseVisualStyleBackColor = false;
             this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.Frozen = true;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // personID
+            // 
+            this.personID.DataPropertyName = "PersonID";
+            this.personID.HeaderText = "PersonID";
+            this.personID.Name = "personID";
+            this.personID.Visible = false;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "Gender";
+            this.gender.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.gender.HeaderText = "Gender";
+            this.gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.gender.Name = "gender";
+            this.gender.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gender.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            // 
+            // House
+            // 
+            this.House.DataPropertyName = "House";
+            this.House.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.House.HeaderText = "House";
+            this.House.Items.AddRange(new object[] {
+            "FAITH",
+            "LOVE"});
+            this.House.Name = "House";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // maritalStatusDataGridViewTextBoxColumn
+            // 
+            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "Marital Status";
+            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
+            // 
+            // anniversaryDateDataGridViewTextBoxColumn
+            // 
+            this.anniversaryDateDataGridViewTextBoxColumn.DataPropertyName = "Anniversary Date";
+            this.anniversaryDateDataGridViewTextBoxColumn.HeaderText = "Anniversary Date";
+            this.anniversaryDateDataGridViewTextBoxColumn.Name = "anniversaryDateDataGridViewTextBoxColumn";
+            // 
+            // childrenDataGridViewTextBoxColumn
+            // 
+            this.childrenDataGridViewTextBoxColumn.DataPropertyName = "Children";
+            this.childrenDataGridViewTextBoxColumn.HeaderText = "Children";
+            this.childrenDataGridViewTextBoxColumn.Name = "childrenDataGridViewTextBoxColumn";
+            // 
+            // occupationDataGridViewTextBoxColumn
+            // 
+            this.occupationDataGridViewTextBoxColumn.DataPropertyName = "Occupation";
+            this.occupationDataGridViewTextBoxColumn.HeaderText = "Occupation";
+            this.occupationDataGridViewTextBoxColumn.Name = "occupationDataGridViewTextBoxColumn";
+            // 
+            // memberRoleDataGridViewTextBoxColumn
+            // 
+            this.memberRoleDataGridViewTextBoxColumn.DataPropertyName = "Member Role";
+            this.memberRoleDataGridViewTextBoxColumn.HeaderText = "Member Role";
+            this.memberRoleDataGridViewTextBoxColumn.Name = "memberRoleDataGridViewTextBoxColumn";
+            // 
+            // visitsDataGridViewTextBoxColumn
+            // 
+            this.visitsDataGridViewTextBoxColumn.DataPropertyName = "Visits";
+            this.visitsDataGridViewTextBoxColumn.HeaderText = "Visits";
+            this.visitsDataGridViewTextBoxColumn.Name = "visitsDataGridViewTextBoxColumn";
+            this.visitsDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // memberSinceDataGridViewTextBoxColumn
+            // 
+            this.memberSinceDataGridViewTextBoxColumn.DataPropertyName = "Member Since";
+            this.memberSinceDataGridViewTextBoxColumn.HeaderText = "Member Since";
+            this.memberSinceDataGridViewTextBoxColumn.Name = "memberSinceDataGridViewTextBoxColumn";
+            // 
+            // waterBaptismDateDataGridViewTextBoxColumn
+            // 
+            this.waterBaptismDateDataGridViewTextBoxColumn.DataPropertyName = "Water Baptism Date";
+            this.waterBaptismDateDataGridViewTextBoxColumn.HeaderText = "Water Baptism Date";
+            this.waterBaptismDateDataGridViewTextBoxColumn.Name = "waterBaptismDateDataGridViewTextBoxColumn";
+            // 
+            // Church
+            // 
+            this.Church.DataPropertyName = "Church";
+            this.Church.HeaderText = "Church";
+            this.Church.Name = "Church";
+            // 
+            // otherMinistryDataGridViewCheckBoxColumn
+            // 
+            this.otherMinistryDataGridViewCheckBoxColumn.DataPropertyName = "Other Ministry";
+            this.otherMinistryDataGridViewCheckBoxColumn.HeaderText = "Other Ministry";
+            this.otherMinistryDataGridViewCheckBoxColumn.Name = "otherMinistryDataGridViewCheckBoxColumn";
+            // 
+            // previousRoleDataGridViewTextBoxColumn
+            // 
+            this.previousRoleDataGridViewTextBoxColumn.DataPropertyName = "Previous Role";
+            this.previousRoleDataGridViewTextBoxColumn.HeaderText = "Previous Role";
+            this.previousRoleDataGridViewTextBoxColumn.Name = "previousRoleDataGridViewTextBoxColumn";
+            // 
             // ViewMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -391,10 +412,11 @@
         private System.Windows.Forms.Button btnViewMemberDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn personID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn House;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maritalStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anniversaryDateDataGridViewTextBoxColumn;

@@ -23,3 +23,4 @@ C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManage
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.NewService.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Settings.resources
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Service.EditService.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManager\obj\Debug\MemberManager.Groups.Groups.resources

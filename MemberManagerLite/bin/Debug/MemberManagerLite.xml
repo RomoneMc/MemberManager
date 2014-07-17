@@ -22,6 +22,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TelephoneDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -38,6 +42,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TelephoneRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.PersonRowChangeEvent">
 	<summary>
 Row event argument class
@@ -51,6 +59,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSet.UsersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSet.Person_TelephoneRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -71,6 +83,10 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.UsersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:MemberManagerLite.ContactLiteDataSetTableAdapters.Person_TelephoneTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -115,7 +131,15 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_navigate_next">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_navigate_previous">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -128,6 +152,10 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:MemberManagerLite.My.Resources.Resources.appbar_settings">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:MemberManagerLite.My.Resources.Resources.bcake">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

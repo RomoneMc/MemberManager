@@ -109,5 +109,11 @@ namespace MemberManager
             Form service = new Service.Service();
             service.Show();
         }
+
+        private void btnGroups_Click(object sender, EventArgs e)
+        {
+            Form groups = new Groups.Groups();
+            groups.Show();
+        }
     }
 }

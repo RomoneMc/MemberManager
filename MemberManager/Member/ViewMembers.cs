@@ -75,10 +75,8 @@ namespace MemberManager.Member
 
         private void dgvMemberGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if(String.IsNullOrWhiteSpace(dgvMemberGrid[e.ColumnIndex, e.RowIndex].Value.ToString()))
-            {
-                btnEditMember.Enabled = true;
-            }
+            btnEditMember.Enabled = true;
         }
+
     }
 }

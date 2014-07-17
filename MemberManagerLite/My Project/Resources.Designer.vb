@@ -63,9 +63,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property appbar_add() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("appbar.add", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property appbar_navigate_next() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("appbar.navigate.next", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property appbar_navigate_previous() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("appbar.navigate.previous", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -96,6 +116,16 @@ Namespace My.Resources
         Friend ReadOnly Property appbar_settings() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("appbar.settings", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property bcake() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bcake", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

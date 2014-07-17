@@ -44,5 +44,21 @@ namespace MemberManager.Member
         {
             rolesBindingSource.Position = rolesBindingSource.Find("PersonID", lblPersonID.Text);
         }
+
+        private void personBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            if (lblHouse.Text.ToLower() == "love")
+            {
+                pbxColorBar.BackColor = Color.Red;
+            }
+            else if (lblHouse.Text.ToLower() == "faith")
+            {
+                pbxColorBar.BackColor = Color.Navy;
+            }
+            else
+            {
+                pbxColorBar.BackColor = Color.WhiteSmoke;
+            }
+        }
     }
 }

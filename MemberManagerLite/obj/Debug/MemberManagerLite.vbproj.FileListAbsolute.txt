@@ -19,3 +19,5 @@ C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManage
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManagerLite\bin\Debug\MemberManagerLite.application
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManagerLite\obj\Debug\MemberManagerLite.exe.manifest
 C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManagerLite\obj\Debug\MemberManagerLite.application
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManagerLite\obj\Debug\MemberManagerLite.NewNumber.resources
+C:\Users\Romone\Documents\Visual Studio 2013\Projects\MemberManager\MemberManagerLite\obj\Debug\MemberManagerLite.ViewImage.resources

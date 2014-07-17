@@ -92,9 +92,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(0, 4);
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnSave.Location = new System.Drawing.Point(6, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(165, 39);
+            this.btnSave.Size = new System.Drawing.Size(157, 43);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -103,9 +104,10 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(171, 4);
+            this.btnClose.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnClose.Location = new System.Drawing.Point(169, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(161, 39);
+            this.btnClose.Size = new System.Drawing.Size(169, 43);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -118,9 +120,9 @@
             this.pnlControls.BackColor = System.Drawing.Color.Transparent;
             this.pnlControls.Controls.Add(this.btnSave);
             this.pnlControls.Controls.Add(this.btnClose);
-            this.pnlControls.Location = new System.Drawing.Point(12, 436);
+            this.pnlControls.Location = new System.Drawing.Point(6, 430);
             this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(332, 48);
+            this.pnlControls.Size = new System.Drawing.Size(341, 49);
             this.pnlControls.TabIndex = 5;
             // 
             // ManageAttendants

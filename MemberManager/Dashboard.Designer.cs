@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnGroups = new System.Windows.Forms.Button();
             this.btnNewService = new System.Windows.Forms.Button();
             this.btnNewMember = new System.Windows.Forms.Button();
             this.mcCalendar = new System.Windows.Forms.MonthCalendar();
@@ -53,24 +54,27 @@
             this.Time = new System.Windows.Forms.Timer(this.components);
             this.personTableAdapter = new MemberManager.ContactDataSetTableAdapters.PersonTableAdapter();
             this.SetVerseoftheDay = new System.ComponentModel.BackgroundWorker();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.gbUpcomingEvents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBirthdays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDisplayImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnLogout);
+            this.groupBox1.Controls.Add(this.btnGroups);
             this.groupBox1.Controls.Add(this.btnNewService);
             this.groupBox1.Controls.Add(this.btnNewMember);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(286, 119);
+            this.groupBox1.Location = new System.Drawing.Point(286, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 304);
+            this.groupBox1.Size = new System.Drawing.Size(313, 271);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tasks";
@@ -92,6 +96,24 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnGroups
+            // 
+            this.btnGroups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGroups.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnGroups.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnGroups.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGroups.Image = global::MemberManager.Properties.Resources.appbar_church;
+            this.btnGroups.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGroups.Location = new System.Drawing.Point(163, 134);
+            this.btnGroups.Name = "btnGroups";
+            this.btnGroups.Size = new System.Drawing.Size(132, 96);
+            this.btnGroups.TabIndex = 2;
+            this.btnGroups.Text = "Groups";
+            this.btnGroups.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGroups.UseVisualStyleBackColor = true;
+            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
             // 
             // btnNewService
             // 
@@ -276,7 +298,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(299, 16);
+            this.label1.Location = new System.Drawing.Point(445, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 21);
             this.label1.TabIndex = 5;
@@ -287,7 +309,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(299, 40);
+            this.lblUsername.Location = new System.Drawing.Point(445, 42);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(146, 45);
             this.lblUsername.TabIndex = 6;
@@ -307,12 +329,28 @@
             this.SetVerseoftheDay.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SetVerseoftheDay_DoWork);
             this.SetVerseoftheDay.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SetVerseoftheDay_RunWorkerCompleted);
             // 
+            // pbxLogo
+            // 
+            this.pbxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLogo.DataBindings.Add(new System.Windows.Forms.Binding("ImageLocation", global::MemberManager.Properties.Settings.Default, "LogoLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pbxLogo.ErrorImage = global::MemberManager.Properties.Resources.appbar_church;
+            this.pbxLogo.Image = global::MemberManager.Properties.Resources.appbar_church;
+            this.pbxLogo.ImageLocation = global::MemberManager.Properties.Settings.Default.LogoLocation;
+            this.pbxLogo.InitialImage = global::MemberManager.Properties.Resources.appbar_church;
+            this.pbxLogo.Location = new System.Drawing.Point(286, 12);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(147, 134);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxLogo.TabIndex = 7;
+            this.pbxLogo.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(912, 435);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.pbxDisplayImage);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label1);
@@ -333,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDisplayImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,6 +400,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.Button btnGroups;
     }
 }
 

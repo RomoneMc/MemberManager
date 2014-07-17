@@ -27,82 +27,101 @@ Partial Class MainForm
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblMemberCount = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.btnDeleteMember = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.txtFilter = New System.Windows.Forms.TextBox()
-        Me.pnlMemberInformation = New System.Windows.Forms.Panel()
-        Me.lbxRelations = New System.Windows.Forms.ListBox()
         Me.lblGender = New System.Windows.Forms.Label()
         Me.PersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContactLiteDataSet = New MemberManagerLite.ContactLiteDataSet()
+        Me.lblCommunity = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblTelephone = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.lblOccupation = New System.Windows.Forms.Label()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.lblEmailAddress = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblMemberRole = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblMemberSince = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnNewRelation = New System.Windows.Forms.Button()
         Me.pbxMemberPicture = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.pbxDivider = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PersonDataGridView = New System.Windows.Forms.DataGridView()
-        Me.PersonID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvMembers = New System.Windows.Forms.DataGridView()
+        Me.PersonalID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Gender = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.EmailAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DOB = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telephone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StreetColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CommunityColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CompanyNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MemberRole = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MemberImage = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MemberSince = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LoadRelationships = New System.ComponentModel.BackgroundWorker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ofdFindPicture = New System.Windows.Forms.OpenFileDialog()
-        Me.btnLogout = New System.Windows.Forms.Button()
         Me.dgvBirthdays = New System.Windows.Forms.DataGridView()
         Me.PersonIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DOBDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BirthdaySource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxBirthdays = New System.Windows.Forms.GroupBox()
         Me.pbxLogo = New System.Windows.Forms.PictureBox()
+        Me.PersonID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Street = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Community = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Company = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PersonTableAdapter = New MemberManagerLite.ContactLiteDataSetTableAdapters.PersonTableAdapter()
         Me.Person_RelationTableAdapter = New MemberManagerLite.ContactLiteDataSetTableAdapters.Person_RelationTableAdapter()
         Me.TableAdapterManager = New MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager()
+        Me.Person_TelephoneTableAdapter = New MemberManagerLite.ContactLiteDataSetTableAdapters.Person_TelephoneTableAdapter()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tbpBasic = New System.Windows.Forms.TabPage()
+        Me.tbpMore = New System.Windows.Forms.TabPage()
+        Me.lbxNumbers = New System.Windows.Forms.ListBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnNewNumber = New System.Windows.Forms.Button()
+        Me.btnNewRelation = New System.Windows.Forms.Button()
+        Me.lbxRelations = New System.Windows.Forms.ListBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.pnlMemberInformation.SuspendLayout()
         CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactLiteDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbxMemberPicture, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbxDivider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PersonDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvBirthdays, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BirthdaySource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbxBirthdays.SuspendLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.tbpBasic.SuspendLayout()
+        Me.tbpMore.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -111,8 +130,8 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.pixel_weave
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.lblMemberCount)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnExport)
         Me.Panel1.Controls.Add(Me.btnRefresh)
         Me.Panel1.Controls.Add(Me.btnDeleteMember)
@@ -120,8 +139,20 @@ Partial Class MainForm
         Me.Panel1.Controls.Add(Me.txtFilter)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(706, 36)
+        Me.Panel1.Size = New System.Drawing.Size(781, 36)
         Me.Panel1.TabIndex = 3
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Image = Global.MemberManagerLite.My.Resources.Resources.logout_26
+        Me.btnLogout.Location = New System.Drawing.Point(347, 0)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(30, 32)
+        Me.btnLogout.TabIndex = 4
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'lblMemberCount
         '
@@ -130,23 +161,11 @@ Partial Class MainForm
         Me.lblMemberCount.AutoSize = True
         Me.lblMemberCount.BackColor = System.Drawing.Color.Transparent
         Me.lblMemberCount.Font = New System.Drawing.Font("Calibri", 11.0!)
-        Me.lblMemberCount.Location = New System.Drawing.Point(607, 8)
+        Me.lblMemberCount.Location = New System.Drawing.Point(682, 8)
         Me.lblMemberCount.Name = "lblMemberCount"
         Me.lblMemberCount.Size = New System.Drawing.Size(77, 18)
         Me.lblMemberCount.TabIndex = 2
         Me.lblMemberCount.Text = "Member(s)"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(356, 7)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 17)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Search:"
         '
         'btnExport
         '
@@ -188,63 +207,19 @@ Partial Class MainForm
         '
         Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFilter.Location = New System.Drawing.Point(409, 4)
+        Me.txtFilter.Location = New System.Drawing.Point(511, 4)
+        Me.txtFilter.MaximumSize = New System.Drawing.Size(150, 25)
+        Me.txtFilter.MinimumSize = New System.Drawing.Size(132, 25)
         Me.txtFilter.Name = "txtFilter"
-        Me.txtFilter.Size = New System.Drawing.Size(170, 25)
+        Me.txtFilter.Size = New System.Drawing.Size(143, 25)
         Me.txtFilter.TabIndex = 3
-        '
-        'pnlMemberInformation
-        '
-        Me.pnlMemberInformation.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlMemberInformation.BackColor = System.Drawing.Color.DarkGray
-        Me.pnlMemberInformation.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.pixel_weave
-        Me.pnlMemberInformation.Controls.Add(Me.lbxRelations)
-        Me.pnlMemberInformation.Controls.Add(Me.lblGender)
-        Me.pnlMemberInformation.Controls.Add(Me.Label13)
-        Me.pnlMemberInformation.Controls.Add(Me.lblTelephone)
-        Me.pnlMemberInformation.Controls.Add(Me.Label9)
-        Me.pnlMemberInformation.Controls.Add(Me.lblOccupation)
-        Me.pnlMemberInformation.Controls.Add(Me.lblLastName)
-        Me.pnlMemberInformation.Controls.Add(Me.lblEmailAddress)
-        Me.pnlMemberInformation.Controls.Add(Me.Label2)
-        Me.pnlMemberInformation.Controls.Add(Me.lblMemberRole)
-        Me.pnlMemberInformation.Controls.Add(Me.Label3)
-        Me.pnlMemberInformation.Controls.Add(Me.lblMemberSince)
-        Me.pnlMemberInformation.Controls.Add(Me.lblFirstName)
-        Me.pnlMemberInformation.Controls.Add(Me.Label12)
-        Me.pnlMemberInformation.Controls.Add(Me.Label4)
-        Me.pnlMemberInformation.Controls.Add(Me.lblAddress)
-        Me.pnlMemberInformation.Controls.Add(Me.Label5)
-        Me.pnlMemberInformation.Controls.Add(Me.btnNewRelation)
-        Me.pnlMemberInformation.Controls.Add(Me.pbxMemberPicture)
-        Me.pnlMemberInformation.Controls.Add(Me.Label6)
-        Me.pnlMemberInformation.Controls.Add(Me.pbxDivider)
-        Me.pnlMemberInformation.Controls.Add(Me.Label7)
-        Me.pnlMemberInformation.Controls.Add(Me.Label8)
-        Me.pnlMemberInformation.Location = New System.Drawing.Point(717, -1)
-        Me.pnlMemberInformation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.pnlMemberInformation.Name = "pnlMemberInformation"
-        Me.pnlMemberInformation.Size = New System.Drawing.Size(318, 664)
-        Me.pnlMemberInformation.TabIndex = 1
-        '
-        'lbxRelations
-        '
-        Me.lbxRelations.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lbxRelations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbxRelations.FormattingEnabled = True
-        Me.lbxRelations.ItemHeight = 17
-        Me.lbxRelations.Location = New System.Drawing.Point(127, 551)
-        Me.lbxRelations.Name = "lbxRelations"
-        Me.lbxRelations.Size = New System.Drawing.Size(172, 53)
-        Me.lbxRelations.TabIndex = 6
         '
         'lblGender
         '
         Me.lblGender.AutoSize = True
         Me.lblGender.BackColor = System.Drawing.Color.Transparent
         Me.lblGender.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Gender", True))
-        Me.lblGender.Location = New System.Drawing.Point(124, 238)
+        Me.lblGender.Location = New System.Drawing.Point(144, 64)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(65, 17)
         Me.lblGender.TabIndex = 2
@@ -261,52 +236,40 @@ Partial Class MainForm
         Me.ContactLiteDataSet.DataSetName = "ContactLiteDataSet"
         Me.ContactLiteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'lblCommunity
+        '
+        Me.lblCommunity.AutoSize = True
+        Me.lblCommunity.BackColor = System.Drawing.Color.Transparent
+        Me.lblCommunity.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Community", True))
+        Me.lblCommunity.Location = New System.Drawing.Point(144, 123)
+        Me.lblCommunity.Name = "lblCommunity"
+        Me.lblCommunity.Size = New System.Drawing.Size(87, 17)
+        Me.lblCommunity.TabIndex = 2
+        Me.lblCommunity.Text = "lblCommunity"
+        Me.lblCommunity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "DOB", True))
-        Me.Label13.Location = New System.Drawing.Point(124, 339)
+        Me.Label13.Location = New System.Drawing.Point(144, 150)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(48, 17)
         Me.Label13.TabIndex = 2
         Me.Label13.Text = "lblDOB"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lblTelephone
-        '
-        Me.lblTelephone.AutoSize = True
-        Me.lblTelephone.BackColor = System.Drawing.Color.Transparent
-        Me.lblTelephone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Telephone", True))
-        Me.lblTelephone.Location = New System.Drawing.Point(124, 366)
-        Me.lblTelephone.Name = "lblTelephone"
-        Me.lblTelephone.Size = New System.Drawing.Size(83, 17)
-        Me.lblTelephone.TabIndex = 2
-        Me.lblTelephone.Text = "lblTelephone"
-        Me.lblTelephone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label9.Location = New System.Drawing.Point(55, 551)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 17)
-        Me.Label9.TabIndex = 3
-        Me.Label9.Text = "Relations:"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'lblOccupation
         '
         Me.lblOccupation.AutoSize = True
         Me.lblOccupation.BackColor = System.Drawing.Color.Transparent
-        Me.lblOccupation.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Occupation", True))
-        Me.lblOccupation.Location = New System.Drawing.Point(124, 396)
+        Me.lblOccupation.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Company", True))
+        Me.lblOccupation.Location = New System.Drawing.Point(144, 178)
         Me.lblOccupation.Name = "lblOccupation"
-        Me.lblOccupation.Size = New System.Drawing.Size(88, 17)
+        Me.lblOccupation.Size = New System.Drawing.Size(77, 17)
         Me.lblOccupation.TabIndex = 2
-        Me.lblOccupation.Text = "lblOccupation"
+        Me.lblOccupation.Text = "lblCompany"
         Me.lblOccupation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblLastName
@@ -314,7 +277,7 @@ Partial Class MainForm
         Me.lblLastName.BackColor = System.Drawing.Color.Transparent
         Me.lblLastName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Last Name", True))
         Me.lblLastName.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLastName.Location = New System.Drawing.Point(8, 187)
+        Me.lblLastName.Location = New System.Drawing.Point(46, 165)
         Me.lblLastName.Name = "lblLastName"
         Me.lblLastName.Size = New System.Drawing.Size(291, 37)
         Me.lblLastName.TabIndex = 5
@@ -325,9 +288,9 @@ Partial Class MainForm
         '
         Me.lblEmailAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblEmailAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Email Address", True))
-        Me.lblEmailAddress.Location = New System.Drawing.Point(130, 427)
+        Me.lblEmailAddress.Location = New System.Drawing.Point(144, 243)
         Me.lblEmailAddress.Name = "lblEmailAddress"
-        Me.lblEmailAddress.Size = New System.Drawing.Size(167, 60)
+        Me.lblEmailAddress.Size = New System.Drawing.Size(167, 49)
         Me.lblEmailAddress.TabIndex = 2
         Me.lblEmailAddress.Text = "lblEmail"
         '
@@ -336,7 +299,7 @@ Partial Class MainForm
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(67, 238)
+        Me.Label2.Location = New System.Drawing.Point(87, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 17)
         Me.Label2.TabIndex = 0
@@ -348,23 +311,35 @@ Partial Class MainForm
         Me.lblMemberRole.AutoSize = True
         Me.lblMemberRole.BackColor = System.Drawing.Color.Transparent
         Me.lblMemberRole.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Member Role", True))
-        Me.lblMemberRole.Location = New System.Drawing.Point(125, 490)
+        Me.lblMemberRole.Location = New System.Drawing.Point(145, 300)
         Me.lblMemberRole.Name = "lblMemberRole"
         Me.lblMemberRole.Size = New System.Drawing.Size(98, 17)
         Me.lblMemberRole.TabIndex = 2
         Me.lblMemberRole.Text = "lblMemberRole"
         Me.lblMemberRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label14.Location = New System.Drawing.Point(60, 123)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(84, 17)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "Community:"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(63, 268)
+        Me.Label3.Location = New System.Drawing.Point(96, 94)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 17)
+        Me.Label3.Size = New System.Drawing.Size(48, 17)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Address:"
+        Me.Label3.Text = "Street:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblMemberSince
@@ -372,7 +347,7 @@ Partial Class MainForm
         Me.lblMemberSince.AutoSize = True
         Me.lblMemberSince.BackColor = System.Drawing.Color.Transparent
         Me.lblMemberSince.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Member Since", True))
-        Me.lblMemberSince.Location = New System.Drawing.Point(125, 520)
+        Me.lblMemberSince.Location = New System.Drawing.Point(145, 330)
         Me.lblMemberSince.Name = "lblMemberSince"
         Me.lblMemberSince.Size = New System.Drawing.Size(102, 17)
         Me.lblMemberSince.TabIndex = 2
@@ -384,7 +359,7 @@ Partial Class MainForm
         Me.lblFirstName.BackColor = System.Drawing.Color.Transparent
         Me.lblFirstName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "First Name", True))
         Me.lblFirstName.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFirstName.Location = New System.Drawing.Point(8, 151)
+        Me.lblFirstName.Location = New System.Drawing.Point(46, 129)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(291, 38)
         Me.lblFirstName.TabIndex = 5
@@ -396,55 +371,35 @@ Partial Class MainForm
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label12.Location = New System.Drawing.Point(84, 339)
+        Me.Label12.Location = New System.Drawing.Point(104, 150)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 17)
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "DOB:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(48, 366)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 17)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Telephone:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'lblAddress
         '
+        Me.lblAddress.AutoSize = True
         Me.lblAddress.BackColor = System.Drawing.Color.Transparent
-        Me.lblAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Address", True))
-        Me.lblAddress.Location = New System.Drawing.Point(124, 268)
+        Me.lblAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonBindingSource, "Street", True))
+        Me.lblAddress.Location = New System.Drawing.Point(144, 94)
         Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(173, 60)
+        Me.lblAddress.Size = New System.Drawing.Size(56, 17)
         Me.lblAddress.TabIndex = 2
-        Me.lblAddress.Text = "lblAddress"
+        Me.lblAddress.Text = "lblStreet"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(42, 396)
+        Me.Label5.Location = New System.Drawing.Point(62, 178)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 17)
+        Me.Label5.Size = New System.Drawing.Size(70, 17)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Occupation:"
+        Me.Label5.Text = "Company:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'btnNewRelation
-        '
-        Me.btnNewRelation.Location = New System.Drawing.Point(127, 608)
-        Me.btnNewRelation.Name = "btnNewRelation"
-        Me.btnNewRelation.Size = New System.Drawing.Size(80, 29)
-        Me.btnNewRelation.TabIndex = 5
-        Me.btnNewRelation.Text = "Manage"
-        Me.btnNewRelation.UseVisualStyleBackColor = True
         '
         'pbxMemberPicture
         '
@@ -454,10 +409,10 @@ Partial Class MainForm
         Me.pbxMemberPicture.ErrorImage = Nothing
         Me.pbxMemberPicture.Image = Global.MemberManagerLite.My.Resources.Resources.appbar_people
         Me.pbxMemberPicture.InitialImage = Global.MemberManagerLite.My.Resources.Resources.appbar_people
-        Me.pbxMemberPicture.Location = New System.Drawing.Point(89, 19)
+        Me.pbxMemberPicture.Location = New System.Drawing.Point(78, 3)
         Me.pbxMemberPicture.Name = "pbxMemberPicture"
-        Me.pbxMemberPicture.Size = New System.Drawing.Size(129, 126)
-        Me.pbxMemberPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbxMemberPicture.Size = New System.Drawing.Size(229, 126)
+        Me.pbxMemberPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbxMemberPicture.TabIndex = 3
         Me.pbxMemberPicture.TabStop = False
         '
@@ -466,31 +421,19 @@ Partial Class MainForm
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(25, 427)
+        Me.Label6.Location = New System.Drawing.Point(45, 243)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(99, 17)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Email Address:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'pbxDivider
-        '
-        Me.pbxDivider.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.pbxDivider.BackColor = System.Drawing.Color.Navy
-        Me.pbxDivider.Location = New System.Drawing.Point(0, 0)
-        Me.pbxDivider.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.pbxDivider.Name = "pbxDivider"
-        Me.pbxDivider.Size = New System.Drawing.Size(2, 670)
-        Me.pbxDivider.TabIndex = 2
-        Me.pbxDivider.TabStop = False
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(30, 490)
+        Me.Label7.Location = New System.Drawing.Point(50, 300)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 17)
         Me.Label7.TabIndex = 1
@@ -502,7 +445,7 @@ Partial Class MainForm
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(25, 520)
+        Me.Label8.Location = New System.Drawing.Point(45, 330)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(99, 17)
         Me.Label8.TabIndex = 1
@@ -513,25 +456,26 @@ Partial Class MainForm
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.PersonDataGridView)
+        Me.Panel2.Controls.Add(Me.dgvMembers)
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Location = New System.Drawing.Point(5, 130)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(706, 524)
+        Me.Panel2.Size = New System.Drawing.Size(781, 524)
         Me.Panel2.TabIndex = 4
         '
-        'PersonDataGridView
+        'dgvMembers
         '
-        Me.PersonDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvMembers.AllowUserToResizeRows = False
+        Me.dgvMembers.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PersonDataGridView.AutoGenerateColumns = False
-        Me.PersonDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.PersonDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.PersonDataGridView.ColumnHeadersHeight = 30
-        Me.PersonDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.PersonDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PersonID, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.MemberImage})
-        Me.PersonDataGridView.DataSource = Me.PersonBindingSource
+        Me.dgvMembers.AutoGenerateColumns = False
+        Me.dgvMembers.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvMembers.ColumnHeadersHeight = 30
+        Me.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PersonalID, Me.FirstName, Me.LastName, Me.Gender, Me.EmailAddress, Me.DOB, Me.Telephone, Me.StreetColumn, Me.CommunityColumn, Me.DataGridViewTextBoxColumn10, Me.CompanyNumber, Me.MemberRole, Me.MemberImage, Me.MemberSince})
+        Me.dgvMembers.DataSource = Me.PersonBindingSource
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -539,83 +483,110 @@ Partial Class MainForm
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.PersonDataGridView.DefaultCellStyle = DataGridViewCellStyle1
-        Me.PersonDataGridView.GridColor = System.Drawing.Color.Gainsboro
-        Me.PersonDataGridView.Location = New System.Drawing.Point(0, 35)
-        Me.PersonDataGridView.Name = "PersonDataGridView"
-        Me.PersonDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.PersonDataGridView.Size = New System.Drawing.Size(706, 489)
-        Me.PersonDataGridView.TabIndex = 3
+        Me.dgvMembers.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvMembers.GridColor = System.Drawing.Color.Gainsboro
+        Me.dgvMembers.Location = New System.Drawing.Point(0, 35)
+        Me.dgvMembers.Name = "dgvMembers"
+        Me.dgvMembers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvMembers.ShowCellErrors = False
+        Me.dgvMembers.ShowCellToolTips = False
+        Me.dgvMembers.ShowEditingIcon = False
+        Me.dgvMembers.ShowRowErrors = False
+        Me.dgvMembers.Size = New System.Drawing.Size(781, 489)
+        Me.dgvMembers.TabIndex = 3
         '
-        'PersonID
+        'PersonalID
         '
-        Me.PersonID.DataPropertyName = "PersonID"
-        Me.PersonID.Frozen = True
-        Me.PersonID.HeaderText = "PersonID"
-        Me.PersonID.Name = "PersonID"
-        Me.PersonID.Visible = False
+        Me.PersonalID.DataPropertyName = "PersonID"
+        Me.PersonalID.Frozen = True
+        Me.PersonalID.HeaderText = "PersonID"
+        Me.PersonalID.Name = "PersonalID"
+        Me.PersonalID.Visible = False
+        Me.PersonalID.Width = 76
         '
-        'DataGridViewTextBoxColumn2
+        'FirstName
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "First Name"
-        Me.DataGridViewTextBoxColumn2.Frozen = True
-        Me.DataGridViewTextBoxColumn2.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.FirstName.DataPropertyName = "First Name"
+        Me.FirstName.Frozen = True
+        Me.FirstName.HeaderText = "First Name"
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.Width = 96
         '
-        'DataGridViewTextBoxColumn3
+        'LastName
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Last Name"
-        Me.DataGridViewTextBoxColumn3.Frozen = True
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.LastName.DataPropertyName = "Last Name"
+        Me.LastName.Frozen = True
+        Me.LastName.HeaderText = "Last Name"
+        Me.LastName.Name = "LastName"
+        Me.LastName.Width = 95
         '
-        'DataGridViewTextBoxColumn4
+        'Gender
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Gender"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Gender"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.Gender.DataPropertyName = "Gender"
+        Me.Gender.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.Gender.HeaderText = "Gender"
+        Me.Gender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.Gender.Name = "Gender"
+        Me.Gender.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Gender.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Gender.Width = 76
         '
-        'DataGridViewTextBoxColumn11
+        'EmailAddress
         '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "DOB"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "DOB"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.EmailAddress.DataPropertyName = "Email Address"
+        Me.EmailAddress.HeaderText = "Email Address"
+        Me.EmailAddress.Name = "EmailAddress"
+        Me.EmailAddress.Width = 116
         '
-        'DataGridViewTextBoxColumn5
+        'DOB
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Address"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DOB.DataPropertyName = "DOB"
+        Me.DOB.HeaderText = "DOB (mm/dd/yyyy)"
+        Me.DOB.Name = "DOB"
+        Me.DOB.Width = 143
         '
-        'DataGridViewTextBoxColumn6
+        'Telephone
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Telephone"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Telephone"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.Telephone.DataPropertyName = "Telephone"
+        Me.Telephone.HeaderText = "Telephone"
+        Me.Telephone.Name = "Telephone"
+        Me.Telephone.Width = 94
         '
-        'DataGridViewTextBoxColumn7
+        'StreetColumn
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Occupation"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Occupation"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.StreetColumn.DataPropertyName = "Street"
+        Me.StreetColumn.HeaderText = "Street"
+        Me.StreetColumn.Name = "StreetColumn"
+        Me.StreetColumn.Width = 67
         '
-        'DataGridViewTextBoxColumn8
+        'CommunityColumn
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Email Address"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Email Address"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Member Role"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Member Role"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.CommunityColumn.DataPropertyName = "Community"
+        Me.CommunityColumn.HeaderText = "Community"
+        Me.CommunityColumn.Name = "CommunityColumn"
+        Me.CommunityColumn.Width = 98
         '
         'DataGridViewTextBoxColumn10
         '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Member Since"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Member Since"
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Company"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Company"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 88
+        '
+        'CompanyNumber
+        '
+        Me.CompanyNumber.DataPropertyName = "Company Number"
+        Me.CompanyNumber.HeaderText = "Company Number"
+        Me.CompanyNumber.Name = "CompanyNumber"
+        Me.CompanyNumber.Width = 140
+        '
+        'MemberRole
+        '
+        Me.MemberRole.DataPropertyName = "Member Role"
+        Me.MemberRole.HeaderText = "Member Role"
+        Me.MemberRole.Name = "MemberRole"
+        Me.MemberRole.Width = 113
         '
         'MemberImage
         '
@@ -623,6 +594,17 @@ Partial Class MainForm
         Me.MemberImage.HeaderText = "Member Image"
         Me.MemberImage.Name = "MemberImage"
         Me.MemberImage.Visible = False
+        Me.MemberImage.Width = 94
+        '
+        'MemberSince
+        '
+        Me.MemberSince.DataPropertyName = "Member Since"
+        Me.MemberSince.HeaderText = "Member Since"
+        Me.MemberSince.Name = "MemberSince"
+        Me.MemberSince.Width = 117
+        '
+        'LoadRelationships
+        '
         '
         'Label10
         '
@@ -637,16 +619,6 @@ Partial Class MainForm
         'ofdFindPicture
         '
         Me.ofdFindPicture.AddExtension = False
-        '
-        'btnLogout
-        '
-        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLogout.Image = Global.MemberManagerLite.My.Resources.Resources.logout_26
-        Me.btnLogout.Location = New System.Drawing.Point(386, 12)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(42, 38)
-        Me.btnLogout.TabIndex = 4
-        Me.btnLogout.UseVisualStyleBackColor = True
         '
         'dgvBirthdays
         '
@@ -681,7 +653,7 @@ Partial Class MainForm
         Me.dgvBirthdays.ReadOnly = True
         Me.dgvBirthdays.RowHeadersVisible = False
         Me.dgvBirthdays.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvBirthdays.Size = New System.Drawing.Size(265, 102)
+        Me.dgvBirthdays.Size = New System.Drawing.Size(248, 88)
         Me.dgvBirthdays.TabIndex = 9
         '
         'PersonIDDataGridViewTextBoxColumn
@@ -721,33 +693,101 @@ Partial Class MainForm
         Me.BirthdaySource.DataMember = "Person"
         Me.BirthdaySource.DataSource = Me.ContactLiteDataSet
         '
-        'GroupBox1
+        'gbxBirthdays
         '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.dgvBirthdays)
-        Me.GroupBox1.Location = New System.Drawing.Point(434, 1)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(277, 125)
-        Me.GroupBox1.TabIndex = 10
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Upcoming Birthdays"
+        Me.gbxBirthdays.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbxBirthdays.BackColor = System.Drawing.Color.Transparent
+        Me.gbxBirthdays.Controls.Add(Me.dgvBirthdays)
+        Me.gbxBirthdays.Location = New System.Drawing.Point(522, 10)
+        Me.gbxBirthdays.Name = "gbxBirthdays"
+        Me.gbxBirthdays.Size = New System.Drawing.Size(264, 111)
+        Me.gbxBirthdays.TabIndex = 10
+        Me.gbxBirthdays.TabStop = False
+        Me.gbxBirthdays.Text = "Upcoming Birthdays"
         '
         'pbxLogo
         '
-        Me.pbxLogo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.pbxLogo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbxLogo.BackColor = System.Drawing.Color.Transparent
         Me.pbxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbxLogo.DataBindings.Add(New System.Windows.Forms.Binding("ImageLocation", Global.MemberManagerLite.My.MySettings.Default, "LogoLocation", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.pbxLogo.ErrorImage = Global.MemberManagerLite.My.Resources.Resources.appbar_people_multiple
         Me.pbxLogo.ImageLocation = Global.MemberManagerLite.My.MySettings.Default.LogoLocation
-        Me.pbxLogo.Location = New System.Drawing.Point(12, 10)
+        Me.pbxLogo.Location = New System.Drawing.Point(15, 10)
+        Me.pbxLogo.MaximumSize = New System.Drawing.Size(165, 150)
+        Me.pbxLogo.MinimumSize = New System.Drawing.Size(117, 110)
         Me.pbxLogo.Name = "pbxLogo"
-        Me.pbxLogo.Size = New System.Drawing.Size(117, 110)
+        Me.pbxLogo.Size = New System.Drawing.Size(165, 111)
         Me.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbxLogo.TabIndex = 6
         Me.pbxLogo.TabStop = False
+        '
+        'PersonID
+        '
+        Me.PersonID.DataPropertyName = "PersonID"
+        Me.PersonID.Frozen = True
+        Me.PersonID.HeaderText = "PersonID"
+        Me.PersonID.Name = "PersonID"
+        Me.PersonID.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "First Name"
+        Me.DataGridViewTextBoxColumn2.Frozen = True
+        Me.DataGridViewTextBoxColumn2.HeaderText = "First Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Last Name"
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Last Name"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Gender"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Gender"
+        Me.DataGridViewTextBoxColumn4.Items.AddRange(New Object() {"Male", "Female"})
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "DOB"
+        DataGridViewCellStyle5.Format = "d"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridViewTextBoxColumn11.HeaderText = "DOB (mm/dd/yyyy)"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Width = 130
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Telephone"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Telephone"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'Street
+        '
+        Me.Street.DataPropertyName = "Street"
+        Me.Street.HeaderText = "Street"
+        Me.Street.Name = "Street"
+        '
+        'Community
+        '
+        Me.Community.DataPropertyName = "Community"
+        Me.Community.HeaderText = "Community"
+        Me.Community.Name = "Community"
+        '
+        'Company
+        '
+        Me.Company.DataPropertyName = "Company"
+        Me.Company.HeaderText = "Company"
+        Me.Company.Name = "Company"
         '
         'PersonTableAdapter
         '
@@ -761,25 +801,169 @@ Partial Class MainForm
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.Person_RelationTableAdapter = Me.Person_RelationTableAdapter
+        Me.TableAdapterManager.Person_TelephoneTableAdapter = Nothing
         Me.TableAdapterManager.PersonTableAdapter = Me.PersonTableAdapter
         Me.TableAdapterManager.RelationTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsersTableAdapter = Nothing
         '
+        'Person_TelephoneTableAdapter
+        '
+        Me.Person_TelephoneTableAdapter.ClearBeforeFill = True
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.tbpBasic)
+        Me.TabControl1.Controls.Add(Me.tbpMore)
+        Me.TabControl1.Location = New System.Drawing.Point(805, 236)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(371, 418)
+        Me.TabControl1.TabIndex = 4
+        '
+        'tbpBasic
+        '
+        Me.tbpBasic.AutoScroll = True
+        Me.tbpBasic.AutoScrollMargin = New System.Drawing.Size(0, 10)
+        Me.tbpBasic.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.pixel_weave
+        Me.tbpBasic.Controls.Add(Me.lblGender)
+        Me.tbpBasic.Controls.Add(Me.lblAddress)
+        Me.tbpBasic.Controls.Add(Me.lblEmailAddress)
+        Me.tbpBasic.Controls.Add(Me.Label5)
+        Me.tbpBasic.Controls.Add(Me.Label2)
+        Me.tbpBasic.Controls.Add(Me.lblOccupation)
+        Me.tbpBasic.Controls.Add(Me.Label12)
+        Me.tbpBasic.Controls.Add(Me.Label8)
+        Me.tbpBasic.Controls.Add(Me.lblMemberRole)
+        Me.tbpBasic.Controls.Add(Me.lblCommunity)
+        Me.tbpBasic.Controls.Add(Me.Label6)
+        Me.tbpBasic.Controls.Add(Me.Label3)
+        Me.tbpBasic.Controls.Add(Me.Label14)
+        Me.tbpBasic.Controls.Add(Me.Label7)
+        Me.tbpBasic.Controls.Add(Me.Label13)
+        Me.tbpBasic.Controls.Add(Me.lblMemberSince)
+        Me.tbpBasic.Location = New System.Drawing.Point(4, 26)
+        Me.tbpBasic.Name = "tbpBasic"
+        Me.tbpBasic.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbpBasic.Size = New System.Drawing.Size(363, 388)
+        Me.tbpBasic.TabIndex = 0
+        Me.tbpBasic.Text = "Basic Info"
+        Me.tbpBasic.UseVisualStyleBackColor = True
+        '
+        'tbpMore
+        '
+        Me.tbpMore.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.pixel_weave
+        Me.tbpMore.Controls.Add(Me.btnNewRelation)
+        Me.tbpMore.Controls.Add(Me.lbxRelations)
+        Me.tbpMore.Controls.Add(Me.Label9)
+        Me.tbpMore.Controls.Add(Me.lbxNumbers)
+        Me.tbpMore.Controls.Add(Me.Label4)
+        Me.tbpMore.Controls.Add(Me.btnNewNumber)
+        Me.tbpMore.Location = New System.Drawing.Point(4, 26)
+        Me.tbpMore.Name = "tbpMore"
+        Me.tbpMore.Padding = New System.Windows.Forms.Padding(3)
+        Me.tbpMore.Size = New System.Drawing.Size(363, 409)
+        Me.tbpMore.TabIndex = 1
+        Me.tbpMore.Text = "More Info"
+        Me.tbpMore.UseVisualStyleBackColor = True
+        '
+        'lbxNumbers
+        '
+        Me.lbxNumbers.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lbxNumbers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbxNumbers.FormattingEnabled = True
+        Me.lbxNumbers.ItemHeight = 17
+        Me.lbxNumbers.Location = New System.Drawing.Point(129, 21)
+        Me.lbxNumbers.Name = "lbxNumbers"
+        Me.lbxNumbers.Size = New System.Drawing.Size(172, 53)
+        Me.lbxNumbers.TabIndex = 9
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(50, 21)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 17)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Telephone:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'btnNewNumber
+        '
+        Me.btnNewNumber.BackColor = System.Drawing.Color.Transparent
+        Me.btnNewNumber.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.appbar_settings
+        Me.btnNewNumber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNewNumber.FlatAppearance.BorderSize = 0
+        Me.btnNewNumber.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnNewNumber.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnNewNumber.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNewNumber.Location = New System.Drawing.Point(88, 32)
+        Me.btnNewNumber.Name = "btnNewNumber"
+        Me.btnNewNumber.Size = New System.Drawing.Size(45, 54)
+        Me.btnNewNumber.TabIndex = 10
+        Me.btnNewNumber.UseVisualStyleBackColor = False
+        '
+        'btnNewRelation
+        '
+        Me.btnNewRelation.Location = New System.Drawing.Point(221, 158)
+        Me.btnNewRelation.Name = "btnNewRelation"
+        Me.btnNewRelation.Size = New System.Drawing.Size(80, 29)
+        Me.btnNewRelation.TabIndex = 12
+        Me.btnNewRelation.Text = "Manage"
+        Me.btnNewRelation.UseVisualStyleBackColor = True
+        '
+        'lbxRelations
+        '
+        Me.lbxRelations.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lbxRelations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbxRelations.FormattingEnabled = True
+        Me.lbxRelations.ItemHeight = 17
+        Me.lbxRelations.Location = New System.Drawing.Point(129, 99)
+        Me.lbxRelations.Name = "lbxRelations"
+        Me.lbxRelations.Size = New System.Drawing.Size(172, 53)
+        Me.lbxRelations.TabIndex = 13
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(57, 99)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(69, 17)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Relations:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Panel3.Controls.Add(Me.pbxMemberPicture)
+        Me.Panel3.Controls.Add(Me.lblLastName)
+        Me.Panel3.Controls.Add(Me.lblFirstName)
+        Me.Panel3.Location = New System.Drawing.Point(805, 7)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(367, 215)
+        Me.Panel3.TabIndex = 11
+        '
         'MainForm
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoSize = True
-        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.MemberManagerLite.My.Resources.Resources.tiny_grid
-        Me.ClientSize = New System.Drawing.Size(1028, 662)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(1188, 662)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.gbxBirthdays)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.pbxLogo)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.btnLogout)
-        Me.Controls.Add(Me.pnlMemberInformation)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -789,24 +973,25 @@ Partial Class MainForm
         Me.Text = "Member Manager"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.pnlMemberInformation.ResumeLayout(False)
-        Me.pnlMemberInformation.PerformLayout()
         CType(Me.PersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactLiteDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbxMemberPicture, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbxDivider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.PersonDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvBirthdays, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BirthdaySource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
+        Me.gbxBirthdays.ResumeLayout(False)
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.tbpBasic.ResumeLayout(False)
+        Me.tbpBasic.PerformLayout()
+        Me.tbpMore.ResumeLayout(False)
+        Me.tbpMore.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents pnlMemberInformation As System.Windows.Forms.Panel
-    Friend WithEvents pbxDivider As System.Windows.Forms.PictureBox
     Friend WithEvents pbxMemberPicture As System.Windows.Forms.PictureBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents lblMemberCount As System.Windows.Forms.Label
@@ -817,23 +1002,18 @@ Partial Class MainForm
     Friend WithEvents txtFilter As System.Windows.Forms.TextBox
     Friend WithEvents btnDeleteMember As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblFirstName As System.Windows.Forms.Label
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents btnNewRelation As System.Windows.Forms.Button
     Friend WithEvents LoadRelationships As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnRefresh As System.Windows.Forms.Button
     Friend WithEvents lblGender As System.Windows.Forms.Label
-    Friend WithEvents lblTelephone As System.Windows.Forms.Label
     Friend WithEvents lblOccupation As System.Windows.Forms.Label
     Friend WithEvents lblEmailAddress As System.Windows.Forms.Label
     Friend WithEvents lblMemberRole As System.Windows.Forms.Label
@@ -844,21 +1024,8 @@ Partial Class MainForm
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents ofdFindPicture As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Person_RelationTableAdapter As MemberManagerLite.ContactLiteDataSetTableAdapters.Person_RelationTableAdapter
-    Friend WithEvents lbxRelations As System.Windows.Forms.ListBox
-    Friend WithEvents PersonDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvMembers As System.Windows.Forms.DataGridView
     Friend WithEvents TableAdapterManager As MemberManagerLite.ContactLiteDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents PersonID As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MemberImage As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents dgvBirthdays As System.Windows.Forms.DataGridView
@@ -867,5 +1034,43 @@ Partial Class MainForm
     Friend WithEvents DOBDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbxBirthdays As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PersonID As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Street As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Community As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Company As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblCommunity As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Person_TelephoneTableAdapter As MemberManagerLite.ContactLiteDataSetTableAdapters.Person_TelephoneTableAdapter
+    Friend WithEvents PersonalID As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FirstName As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents LastName As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Gender As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents EmailAddress As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DOB As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Telephone As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents StreetColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CommunityColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CompanyNumber As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MemberRole As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MemberImage As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MemberSince As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents tbpBasic As System.Windows.Forms.TabPage
+    Friend WithEvents tbpMore As System.Windows.Forms.TabPage
+    Friend WithEvents btnNewRelation As System.Windows.Forms.Button
+    Friend WithEvents lbxRelations As System.Windows.Forms.ListBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents lbxNumbers As System.Windows.Forms.ListBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents btnNewNumber As System.Windows.Forms.Button
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
 End Class
